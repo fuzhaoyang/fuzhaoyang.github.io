@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>朝阳文化传播</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <link type="text/css" rel="Stylesheet" href="css/imageflow.css" />
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/imageflow.js"></script>
+
+
+    <style>
+
+        body {
+            padding-top: 50px;
+            color: #5a5a5a;
+            background: url("images/首页.png");
+        }
+
+        /* 轮播广告 */
+
+        .carousel {
+            height: 500px;
+            margin-bottom: 10px;
+        }
+
+        .carousel .item {
+            height: 500px;
+            background-color: #000;
+        }
+
+        .carousel .item img {
+            width: 100%;
+        }
+
+        .carousel-caption {
+            z-index: 10;
+        }
+
+        .carousel-caption p {
+            margin-bottom: 20px;
+            font-size: 20px;
+            line-height: 1.8;
+        }
+
+
+       /*. navbar{*/
+           /*position: relative;*/
+       /*}*/
+        .navbar-brand img{
+            width: 30px;
+            height:30px;
+            margin-top: -14px;
+            margin-left: 12px;
+            position: absolute;
+        }
+        .navbar-brand {
+            line-height: 50px;
+            font-size: 14px;
+        }
+
+        .navbar-nav li{
+            font-size: 12px;
+            padding: 0 15px;
+        }
+        /* 简介 */
+        .img{
+            height:390px;
+            width:390px;
+        }
+        #summary-container{
+            margin-top: -17px;
+        }
+
+        .summary {
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .summary .col-md-4 {
+            margin-bottom: 20px;
+            text-align: center;
+
+        }
+
+
+        .feature-divider {
+            margin: 40px 0;
+        }
+
+        .feature {
+            padding: 30px 0;
+        }
+
+        .feature-heading {
+            font-size: 50px;
+            color: #2a6496;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 28px;
+        }
+
+        /* 响应式布局 */
+
+        @media (max-width: 768px) {
+
+            .summary {
+                padding-right: 3px;
+                padding-left: 3px;
+            }
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+
+            .carousel img {
+                min-height: 300px;
+            }
+
+            .carousel-caption p {
+                font-size: 16px;
+                line-height: 1.4;
+            }
+
+            .feature-heading {
+                font-size: 34px;
+            }
+
+            .feature-heading .text-muted {
+                font-size: 22px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .feature-heading {
+                margin-top: 120px;
+            }
+            .row img{
+                width: 100%;
+            }
+            .row a{
+                text-align: center;
+            }
+
+        }
+        @media (min-width: 750px) {
+            .row img{
+                width: 100%;
+            }
+        }
+        @media (min-width: 650px) {
+         .row img{
+             width: 100%;
+         }
+        }
+       .title{
+           width: 100%;
+           height: 60px;
+           line-height: 50px;
+           text-align: center;
+           margin-bottom: 10px;
+       }
+        .title h2{
+            color: red;
+            font-weight: bolder;
+        }
+        .title h4{
+            color: #000;
+            font-weight: bolder;
+        }
+        .row{
+            /*background: url("images/products.png") no-repeat;*/
+            margin: 0 60px;
+        }
+        footer{
+            width: 100%;
+            height: 300px;
+            background: #38393D;
+            margin-top: 50px;
+
+        }
+        .footer-left{
+            width: 600px;
+            height: 280px;
+            float: left;
+            text-align: left;
+            line-height: 50px;
+            padding-left: 80px;
+            color: #fff;
+        }
+        .footer-right{
+            width: 600px;
+            height: 280px;
+            float: left;
+            text-align: center;
+            color: #fff;
+        }
+        .footer-right img{
+            width: 200px;
+            height: 200px;
+        }
+        .navbar-nav li a:hover{
+            color: #fff;
+        }
+    </style>
+
+</head>
+
+<body>
+<!-- 顶部导航 -->
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation" id="menu-nav">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span><img src="images/logo.png"> </span>朝阳传播</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="关于我们.html">关于我们</a></li>
+                <li><a href="最新活动.html">最新活动</a></li>
+                <li><a href="新闻中心.html">新闻中心</a></li>
+                <li><a href="">星光大道</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/1.jpg" alt="1 slide">
+
+            <div class="container-fluid">
+                <div class="carousel-caption">
+                    <h1>ZHAO YANG MEDIA</h1>
+
+                    <p>朝阳集团是一家以市场营销为导向，内容为载体的文化运营公司，主要从事内容开发广告营销，衍生产品运营，明星培训，明星经纪等业务。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.google.cn/intl/zh-CN/chrome/browser/"
+                          role="button" target="_blank">点击进入</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="2 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>ZHAO YANG MEDIA</h1>
+
+                    <p>朝阳集团是一家以市场营销为导向，内容为载体的文化运营公司，主要从事内容开发广告营销，衍生产品运营，明星培训，明星经纪等业务。</p>
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.firefox.com.cn/download/" target="_blank"
+                          role="button">点击进入</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="3 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>ZHAO YANG MEDIA</h1>
+
+                    <p>朝阳集团是一家以市场营销为导向，内容为载体的文化运营公司，主要从事内容开发广告营销，衍生产品运营，明星培训，明星经纪等业务。</p>
+
+
+                    <p><a class="btn btn-lg btn-primary" href="http://www.apple.com/cn/safari/" target="_blank"
+                          role="button">点击进入</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/4.jpg" alt="4 slide">
+
+            <div class="container">
+                <div class="carousel-caption">
+                    <h1>ZHAO YANG MEDIA</h1>
+
+                    <p>朝阳集团是一家以市场营销为导向，内容为载体的文化运营公司，主要从事内容开发广告营销，衍生产品运营，明星培训，明星经纪等业务。</p>
+                    
+                    <p><a class="btn btn-lg btn-primary" href="http://www.opera.com/zh-cn" target="_blank"
+                          role="button">点击进入</a></p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+  <section>
+      <article>
+    <div class="title">
+    <h2 class="ht11">ABULT OUS</h2>
+    <h4 class="ht22">关于我们</h4>
+        </div>
+    <div class="row">
+            <div class="col-xs-12 col-md-6"> <img src="images/about.png" alt="主营业务"></div>
+            <div class="col-xs-12 col-md-6"> <img src="images/ous.png" alt="主营业务"></div>
+
+        </div>
+          </article>
+      <article>
+<div class="title">
+ <h2 class="ht1">MAIN BUSINESS</h2>
+    <h4 class="ht">主营业务</h4>
+
+</div>
+          <div class="row">
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                      <img src="images/11.jpg" alt="主营业务">点击进入
+                  </a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                      <img src="images/22.jpg" alt="主营业务">点击进入
+                  </a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                      <img src="images/11.jpg" alt="主营业务">点击进入
+                  </a>
+              </div>
+              <div class="col-xs-12 col-sm-6 col-md-3">
+                  <a href="#" class="thumbnail">
+                      <img src="images/22.jpg" alt="主营业务">点击进入
+                  </a>
+              </div>
+      </article>
+      <article>
+          <div class="title">
+              <h2 class="ht11">PRODUCTS</h2>
+              <h4 class="ht22">产品展示</h4>
+          </div>
+          <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 product"><img src="images/product1.png"> </div>
+              </div>
+      </article>
+      <article>
+          <div class="title">
+              <h2 class="ht11">SIGNED ARTISTS</h2>
+              <h4 class="ht22">签约艺人</h4>
+          </div>
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-12 product">
+                  <div>
+                      <input id="S_Num" type="hidden" value="8" />
+                      <div id="starsIF" class="imageflow">
+                          <img src="images/6.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="沙溢" />
+                          <img src="images/7.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="廖凡" />
+                          <img src="images/8.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="保剑锋" />
+                          <img src="images/9.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="姚晨" />
+                          <img src="images/10.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="井柏然" />
+                          <img src="images/12.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="李晨" />
+                          <img src="images/13.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="段奕宏" />
+                          <img src="images/14.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="朱亚文" />
+                          <img src="images/15.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="苏有朋" />
+                          <img src="images/16.jpg" longdesc="http://www.777moban.com" width="280" height="300" alt="张涵予" />
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </article>
+      <article>
+          <div class="title">
+              <h2 class="ht11">PARTNER</h2>
+              <h4 class="ht22">合作品牌</h4>
+          </div>
+          <div class="row">
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/111.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/222.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/333.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/444.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/555.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/666.png"> </div>
+
+
+          </div>
+          <div class="row" style="padding-top: 15px;margin-top: 20px">
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/111.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/222.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/333.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/444.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/555.png"> </div>
+              <div class="col-xs-6 col-sm-4 col-md-2 product"><img src="images/666.png"> </div>
+          </div>
+      </article>
+      </section>
+      <footer>
+          <div class="row">
+              <div class="col-sm-4 col-md-6 product">
+                  <div class="footer-left">
+                      <h3>Contact Ous</h3>
+                      <p>朝阳文化传媒有限公司</p>
+                      <p>公司电话：0912-5496432</p>
+                      <p>公司邮箱:932647051</p>
+                      <p>公司地址：西安未央区经济技术开发区1785号</p>
+                  </div>
+              </div>
+              <div class="col-sm-4 col-md-6 product">
+                  <div class="footer-right">
+                      <h3>公司二维码</h3>
+                      <img src="images/footer-imgs.png">
+                  </div>
+              </div>
+          </div>
+      </footer>
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

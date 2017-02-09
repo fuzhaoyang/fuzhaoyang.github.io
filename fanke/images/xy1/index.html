@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中国移动</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-size: 12px;
+            font-family: "微软雅黑";
+            text-align: center;
+        }
+        .top-bar{
+            width: 100%;
+            height:25px;
+            border-bottom:1px solid #ececec ;
+        }
+        .top-bar-content{
+            margin: 0 auto;
+            height: 25px;
+            width: 1200px;
+        }
+        .top-bar-left1{
+            width: 71px;
+            height:100%;
+            float: left;
+            border-right: 1px solid #ececec;
+            text-align: center;
+            line-height: 25px;
+            color: #888888;
+        }
+        .top-bar-left2{
+            width: 71px;
+            height:100%;
+            float: left;
+            border-right: 1px solid #ececec;
+            text-align: center;
+            line-height: 25px;
+            color: #888888;
+        }
+        .top-bar-right{
+            width: 420px;
+            height: 100%;
+            float: right;
+            _position: relative;
+        }
+        .top-bar-right ul{
+            _position: absolute;
+            _margin-left: -180px;
+        }
+        .top-bar-right ul li{
+          list-style: none;
+            float: left;
+            height: 12px;
+            font-size: 12px;
+            text-align: center;
+            border-right: 1px solid #ececec;
+            margin-top: 6px;
+            padding: 0 3px;
+            line-height: 12px;
+
+        }
+        .top-bar-right ul li img{
+        display: block;
+        }
+
+        .top-bar-right ul li a{
+            text-decoration: none;
+            color: #888888;
+
+        }
+        .top-bar-right ul li a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+        }
+        .person{
+            width: 12px;
+            height: 13px;
+            background: url("images/t3-1.png");
+            float: left;
+            margin-left: 13px;
+        }
+        .text{
+            text-decoration:none;
+            color: #e40077;
+        }
+        .phone{
+            width: 10px;
+            height: 14px;
+            background: url("images/t1-1.png");
+            margin-left:10px ;
+            float: left;
+        }
+        .text1{
+            line-height: 25px;
+            text-decoration:none;
+            color: #e40077;
+        }
+        .bar-bottom{
+            width: 1200px;
+            height:60px;
+            margin: 0 auto;
+            position: relative;
+            margin-top: 15px;
+            _position: relative;
+        }
+        .logo{
+            width:230px;
+            height: 42px;
+            float: left;
+            background:url("images/logo.png");
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            _position: absolute;
+        }
+        .search-input{
+            width: 573px;
+            height: 33px;
+            float: right;
+            margin-right:53px;
+            border: 1px solid #dfdfdf;
+            _position:relative;
+        }
+        .search-bottom{
+            width: 627px;
+            height: 25px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+        .input1{
+            width: 495px;
+            height: 33px;
+            float: left;
+        }
+        .input1-bottom{
+            width: 78px;
+            height: 100%;
+            background: #25b2fe;
+            float: left;
+            line-height: 35px;
+            font-size: 16px;
+            color: #fff;
+            text-align:center;
+            _position: absolute;
+            _margin-left:-40px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .input1-bottom img{
+            display: block;
+            margin-top:9px;
+            margin-left: 12px;
+            float:left;
+        }
+        #input2{
+            width:100%;
+            height: 33px;
+            border: none;
+            color: #999999;
+            padding-left: 10px;
+            _position: relative;
+            line-height: 33px;
+        }
+        .search-bottom ul{
+            margin-left: -20px;
+            _position: absolute;
+            _margin-left:-335px;
+        }
+        .search-bottom ul li{
+            list-style: none;
+            float: left;
+            padding-left: 20px;
+            line-height: 35px;
+        }
+        .search-bottom ul li a{
+            color:#666666;
+            text-decoration: none;
+            display: block;
+        }
+        .search-bottom ul li a:hover{
+            text-decoration: underline;
+            color:#0085D0 ;
+        }
+        .home {
+            width: 50px;
+            height: 15px;
+            float: left;
+            margin-left: 260px;
+            margin-top: 30px;
+            text-align: left;
+            line-height: 15px;
+            _position: absolute;
+        }
+        .home img{
+            display: block;
+            float: right;
+            margin-top: 5px;
+            padding-right: 13px;
+            border: 0;
+        }
+        /*导航部分*/
+        .nav{
+            width: 1200px;
+            height: 40px;
+            margin: 0 auto;
+            margin-top: 15px;
+            display: block;
+        }
+        .nav1{
+            width: 160px;
+            height: 38px;
+            background: #e4e4e4;
+            border-top: 2px solid #0085D0;
+            border-right: 1px solid #FFFFFF;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            color:#0785D0;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .nav1 a{
+            text-decoration: none;
+        }
+        .nav1 a:hover{
+            display: block;
+            background: #F3F3F3;
+            color: #1F85D0;
+            text-decoration: none;
+        }
+        .nav2{
+            width: 262px;
+            height: 40px;
+            background: #e4e4e4;
+            border-right: 1px solid #FFFFFF;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            color:#73676F;
+            display: block;
+            text-decoration: none;
+        }
+        .nav2 a{
+            text-decoration: none;
+        }
+        .nav2 a:hover{
+            display: block;
+            background: #F3F3F3;
+            color: #1F85D0;
+            text-decoration: none;
+        }
+        .nav3{
+            width: 262px;
+            height: 40px;
+            background: #e4e4e4;
+            border-right: 1px solid #FFFFFF;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            color:#73676F;
+            display: block;
+            text-decoration: none;
+        }
+        .nav3 a{
+            text-decoration: none;
+        }
+        .nav3 a:hover{
+            display: block;
+            background: #F3F3F3;
+            color: #1F85D0;
+            text-decoration: none;
+        }
+        .nav4{
+            width: 262px;
+            height: 40px;
+            background: #e4e4e4;
+            border-right: 1px solid #FFFFFF;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            color:#73676F;
+            display: block;
+            text-decoration: none;
+        }
+        .nav4 a{
+            text-decoration: none;
+        }
+        .nav4 a:hover{
+            display: block;
+            background: #F3F3F3;
+            color: #1F85D0;
+        }
+        .nav5{
+            width: 250px;
+            height: 40px;
+            background: #e4e4e4;
+            float: left;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            color:#73676F;
+            display: block;
+            text-decoration: none;
+        }
+        .nav5 a{
+            text-decoration: none;
+        }
+        .nav5 a:hover{
+            display: block;
+            background: #F3F3F3;
+            color: #1F85D0;
+            text-decoration: none;
+        }
+        /*banner部分*/
+        .banner{
+            width: 1200px;
+            height: 350px;
+            margin: 0 auto;
+            margin-top: 5px;
+        }
+        .banner-left{
+            width: 158px;
+            height: 348px;
+            float: left;
+            margin-right: 11px;
+            border: 1px solid #b8d9e9;
+        }
+        .banner-l a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+            display: block;
+        }
+        .banner-center{
+            width: 740px;
+            height: 350px;
+            float: left;
+            position: relative;
+            overflow: hidden;
+        }
+        .banner ul{
+            width: 2960px;
+            height:350px;
+            position: absolute;
+            top:0;
+            left: 0;
+        }
+        .banner ul li{
+            list-style: none;
+            float: left;
+            display: block;
+        }
+        .circle_box{
+            width: 200px;
+            height:20px;
+            position: absolute;
+            top: 90%;
+            right: 35%;
+
+        }
+        .circle{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background:#000;
+            float: left;
+            margin: 0 10px;
+        }
+        .circle_active{
+            background: red;
+        }
+        .buttom-left{
+            width: 30px;
+            height: 70px;
+            position: absolute;
+            background: url("images/lbnextpre.png") 0 0;
+            left: 0;
+            top: 50%;
+            margin-top: -35px;
+            cursor: pointer;
+        }
+        .buttom-right{
+            width: 30px;
+            height: 70px;
+            position: absolute;
+            background: url("images/lbnextpre.png")  -40px 0;
+            right: 0;
+            top: 50%;
+            margin-top: -35px;
+            cursor: pointer;
+        }
+        .banner-right{
+            width: 276px;
+            height: 348px;
+            float: left;
+            margin-left: 11px;
+            border: 1px solid #b8d9e9;
+        }
+        .left1{
+            width: 138px;
+            height: 33px;
+            border-bottom: 1px solid #e9e9e9;
+            margin: 0 10px;
+            text-align: center;
+            line-height: 33px;
+        }
+        .left2 img{
+            display: block;
+            padding-top: 23px;
+            border: 0;
+        }
+        .left2{
+            width: 138px;
+            height: 63px;
+            border-bottom: 1px solid #e9e9e9;
+            margin: 0 10px;
+        }
+        .ico2{
+            width:21px;
+            height: 21px;
+            background:url("images/ico2.gif");
+            float: left;
+            margin-top: 20px;
+            margin-left: 29px;
+            display: block;
+            border: 0;
+        }
+        .text3{
+            width: 40px;
+            height: 21px;
+            float: left;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .text3 a{
+            text-decoration: none;
+            color: #333333;
+            display: block;
+            border:0 ;
+        }
+        .ico3{
+            width:21px;
+            height: 21px;
+            background:url("images/ico3.gif");
+            float: left;
+            margin-top: 20px;
+            margin-left: 29px;
+        }
+        .ico1{
+            width:21px;
+            height: 21px;
+            background:url("images/ico1.gif");
+            float: left;
+            margin-top: 20px;
+            margin-left: 29px;
+        }
+
+        .left3{
+            width: 138px;
+            height: 62px;
+            border-bottom: 1px solid #e9e9e9;
+            margin: 0 10px;
+            display: block;
+        }
+        .left4{
+            width: 138px;
+            display: block;
+            height: 62px;
+            border-bottom: 1px solid #e9e9e9;
+            margin: 0 10px;
+        }
+        .ico4{
+            width:21px;
+            height: 21px;
+            background:url("images/ico4.gif");
+            float: left;
+            margin-top: 20px;
+            margin-left: 29px;
+        }
+        .left5{
+            width: 138px;
+            height: 62px;
+            border-bottom: 1px solid #e9e9e9;
+            margin: 0 10px;
+            display: block;
+        }
+        .ico5{
+            width:21px;
+            height: 21px;
+            background:url("images/ico5.jpg");
+            float: left;
+            margin-top: 20px;
+            margin-left: 29px;
+        }
+        .text4{
+            width: 50px;
+            height: 21px;
+            float: left;
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        .text4 a{
+            text-decoration: none;
+            color: #333333;
+            display: block；
+        }
+        .left6{
+            width: 138px;
+            height: 62px;
+            margin: 0 10px;
+        }
+        .banner-right ul li{
+            list-style: none;
+            float: left;
+            padding: 15px 30px;
+            display: block;
+        }
+        .banner-right-top{
+            width: 270px;
+            height: 180px;
+            margin: 0 auto;
+        }
+        .banner-box{
+            width: 90px;
+            height: 90px;
+            float: left;
+            position: relative;
+
+        }
+        .hot2{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #E40077;
+            position: absolute;
+            right:20px;
+            top: 8px;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+        }
+        .hot1{
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #E40077;
+            position: absolute;
+            right:20px;
+            top: 8px;
+            text-align: center;
+            line-height: 20px;
+            color: #fff;
+        }
+        .box-top{
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            background: url("images/ico6.gif");
+            margin-top: 18px;
+            display: block;
+            border: 0;
+        }
+        .box-bottom{
+            width: 90px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 12px;
+        }
+
+        .box-top1{
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            margin-top: 18px;
+            cursor: pointer;
+        }
+        .box-top img{
+            width: 32px;
+            height: 32px;
+            display: block;
+            cursor: pointer;
+        }
+        .box-top img:hover{
+            width: 38px;
+            height: 38px;
+        }
+        .box-top3 img{
+            width: 32px;
+            height: 32px;
+            display: block;
+            cursor: pointer;
+        }
+        .box-top2 img:hover{
+            width: 38px;
+            height: 38px;
+        }
+        .box-top3 img:hover{
+            width: 38px;
+            height: 38px;
+        }
+        .box-top4 img{
+            width: 32px;
+            height: 32px;
+            display: block;
+            cursor: pointer;
+        }
+        .box-top4 img:hover{
+            width: 38px;
+            height: 38px;
+        }
+        .box-top5 img{
+            width: 32px;
+            height: 32px;
+            display: block;
+            cursor: pointer;
+        }
+        .box-top5 img:hover{
+            width: 38px;
+            height: 38px;
+        }
+        .box-top1 img:hover{
+            width: 38px;
+            height: 38px;
+        }
+        .box-bottom1 {
+            width: 90px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 12px;
+            text-decoration: none;
+        }
+        .box-top2{
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            margin-top: 18px;
+        }
+        .box-bottom2{
+            width: 90px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 12px;
+        }
+        .box-top3{
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            margin-top: 18px;
+        }
+        .box-bottom3{
+            width: 90px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 12px;
+        }
+        .box-top4{
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            margin-top: 18px;
+        }
+        .box-bottom4{
+            width: 90px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 12px;
+        }
+        .box-top5{
+            width: 32px;
+            height: 32px;
+            margin: 0 auto;
+            margin-top: 18px;
+        }
+        .box-bottom5{
+            width: 90px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            margin-top: 12px;
+        }
+        .banner-right-bottom{
+            width: 276px;
+            height: 170px;
+        }
+        .price{
+            width: 276px;
+            height: 30px;
+            margin-bottom: 13px;
+
+        }
+        .price-input{
+            width: 276px;
+            height: 34px;
+            margin-bottom: 12px;
+        }
+        .price-input1{
+            width: 276px;
+            height: 34px;
+            margin-bottom: 13px;
+
+        }
+        .price-submit{
+            width: 90px;
+            height: 34px;
+            margin: 0 auto;
+            background:#33acfb ;
+            line-height: 34px;
+            text-align: center;
+        }
+        .price-submit a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .price1{
+            float: left;
+            line-height: 30px;
+            text-align: left;
+            padding-left: 25px;
+        }
+        .price2{
+            width: 90px;
+            height: 30px;
+            float: right;
+            line-height: 30px;
+            text-align: right;
+            padding-right: 25px;
+            color: #ff0000;
+            font-weight: bold;
+        }
+        .input3{
+            width: 234px;
+            height: 34px;
+            margin: 0 auto;
+            border: 1px solid #dadada;
+        }
+        #input4{
+            width: 234px;
+            height: 34px;
+            border: none;
+            color: #cccccc;
+        }
+        .input5{
+            width: 234px;
+            height: 34px;
+            margin: 0 auto;
+        }
+        .input6{
+            width: 40px;
+            height: 33px;
+            margin: 0 auto;
+            float: left;
+            margin-right: 6px;
+            border: 1px solid #dadada;
+            border-radius: 3px;
+            line-height: 33px;
+            text-align: center;
+            color: #666666;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .input6:hover{
+            background: #e40077;
+            color: #fff;
+        }
+        /*产品部分*/
+        .product{
+            width: 1200px;
+            height: 182px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border: 1px solid #dadada;
+            background: #DFDFDF;
+        }
+        .product-content {
+            width: 1170px;
+            height: 160px;
+            margin: 0 auto;
+            margin-top: 11px;
+            position: relative;
+            margin-left: 15px;
+            display: block;
+        }
+        .product-content ul li{
+            list-style: none;
+            float: left;
+            padding-right: 10px;
+
+        }
+        .product-content ul li img{
+            width: 285px;
+            height: 160px;
+            display: block;
+            border: 0;
+        }
+        .product-ico1{
+            width: 28px;
+            height: 35px;
+            background:url("images/sprit.gif") 0 0;
+            position: absolute;
+            left:-15px;
+            top:50%;
+            margin-top: -17px;
+            cursor: pointer;
+        }
+        .product-ico2{
+            width: 28px;
+            height: 35px;
+            background:url("images/sprit.gif") -32px 0;
+            position: absolute;
+            right: -15px;
+            top:50%;
+            margin-top: -17px;
+            cursor: pointer;
+        }
+        .content{
+            width: 1200px;
+            height:430px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border: 1px solid #dadada;
+            _position: relative;
+        }
+        .content-top{
+            width:1200px;
+            height:52px;
+            margin: 0 auto;
+        }
+        .content-top-left{
+            height:52px;
+            float: left;
+            line-height: 52px;
+            text-align: center;
+            color: #2f85d0;
+            padding-left: 30px;
+        }
+        .content-top-right{
+            height:52px;
+            float:right;
+            line-height: 52px;
+            text-align: center;
+            padding-right: 30px;
+        }
+        .content-top-right a{
+            text-decoration: none;
+        }
+        .content-top-right a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+        }
+        .product1{
+            width: 298px;
+            height: 377px;
+            float: left;
+        }
+        .product-right{
+            width: 902px;
+            height: 377px;
+            float: left;
+            _position: absolute;
+            _margin-left:-448px ;
+        }
+        .product-right a{
+            text-decoration: none;
+        }
+        .product-right ul li{
+            width: 299px;
+            height:188px;
+            list-style: none;
+            float: left;
+            border-right:1px solid #dadada;
+            border-top:1px solid #dadada ;
+        }
+        /*.product-right ul li:nth-child(1){*/
+            /*border-left: 0;*/
+        /*}*/
+        /*.product-right ul li:nth-child(2){*/
+           /*border-right: 0;*/
+            /*border-left: 0;*/
+        /*}*/
+        /*.product-right ul li:nth-child(3){*/
+            /*border-right: 0;*/
+        /*}*/
+        /*.product-right ul li:nth-child(4){*/
+            /*border: 0;*/
+        /*}*/
+        /*.product-right ul li:nth-child(6){*/
+            /*border-right: 0;*/
+            /*border-bottom: 0;*/
+            /*border-top: 0;*/
+        /*}*/
+        /*.product-right ul li:nth-child(5){*/
+            /*border-top: 0;*/
+            /*border-bottom: 0;*/
+            /*border-right: 0;*/
+
+        /*}*/
+
+        .product-right ul li img{
+            display: block;
+            border: 0;
+        }
+        .product-right-top1{
+            width: 100%;
+            height: 30px;
+            line-height: 30px;
+            color:#333333;
+        }
+        .product-right-top11{
+            padding-left: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .product-right-top22{
+            padding-left: 20px;
+            font-size: 14px;
+            color: #666666;
+        }
+        .product-right-top2{
+            width: 100%;
+            height: 28px;
+            line-height: 28px;
+        }
+        .product-right-img{
+            width: 299px;
+            height:130px;
+            display: block;
+            border: 0;
+        }
+        .product-right-img img{
+            display: block;
+            float: right;
+             -webkit-transition: all .3s linear;
+             -moz-transition:all .3s linear;
+             -o-transition:all .3s linear;
+            border: 0;
+
+        }
+        .product-right-img img:hover{
+            display: block;
+            float: right;
+            margin-right: 15px;
+            border: 0;
+        }
+        .product-mobile{
+            width: 1200px;
+            height: 430px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border: 1px solid #dadada;
+        }
+        .mobile{
+            width: 1200px;
+            height: 378px;
+            float: left;
+        }
+        .mobile1{
+            width: 299px;
+            height: 100%;
+            border: 1px solid #dadada;
+            float: left;
+            border-right: 0;
+            border-bottom: 0;
+        }
+        .banner-left a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+        }
+        .mobile a{
+            text-decoration: none;
+        }
+        .mobile-top{
+            width: 299px;
+            height: 105px;
+        }
+        .mobile-bottom{
+            width: 299px;
+            height:273px;
+        }
+        .mobile-left{
+            width: 150px;
+            height:105px;
+            float: left;
+        }
+        .mobile-right img{
+            display: block;
+            float: right;
+            border: 0;
+        }
+        .mobile-bottom img{
+            display: block;
+            float: right;
+             -webkit-transition:all .3s linear;
+             -moz-transition:all .3s linear;
+            border: 0;
+        }
+        .mobile-bottom img:hover{
+            display: block;
+            float: right;
+            margin-right: 15px;
+        }
+        .mobile-text1{
+            color: #666666;
+            padding-left: 20px;
+            margin-top: 25px;
+        }
+        .mobile-text2{
+            color: #0085d0;
+            padding-left: 20px;
+            margin-top: 5px;
+        }
+        .mobile-text3{
+            color: #ef33a2;
+            padding-left: 20px;
+            margin-top: 5px;
+            font-weight: bold;
+            font-size: 16px;
+
+        }
+    /*底部*/
+      .footer{
+          width: 1200px;
+          height: 230px;
+          margin: 0 auto;
+          margin-top: 10px;
+          border: 1px solid #dadada;
+      }
+       .list1{
+           float: left;
+           list-style: none;
+           padding-right: 100px;
+           margin-top: 35px;
+           margin-left: 50px;
+       }
+        .list2{
+            list-style: none;
+            line-height: 25px;
+        }
+        .list2 a{
+            text-decoration: none;
+            color: #666666;
+        }
+        .list2 a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+        }
+        .footer-bottom{
+            width:1200px;
+            height:230px;
+            margin: 0 auto;
+            margin-top: 10px;
+            border-top: 1px solid #dadada;
+            position: relative;
+        }
+        .footer-bottom1{
+                width: 615px;
+                height:20px;
+                margin: 0  auto;
+                margin-top: 30px;
+            }
+        .footer-bottom1 a{
+            color: #935454;
+            text-decoration: none;
+        }
+        .footer-bottom1 a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+        }
+        .footer-bottom2{
+            width: 615px;
+            height:20px;
+            margin: 0  auto;
+            margin-top: 15px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .footer-bottom2 a{
+            color: #935454;
+            text-decoration: none;
+        }
+        .footer-bottom2 a:hover{
+            text-decoration: underline;
+            color:#0582D2;
+        }
+        .footer-bottom3{
+            width: 615px;
+            height:20px;
+            margin: 0  auto;
+            margin-top: 15px;
+            line-height: 20px;
+            text-align: center;
+        }
+        .footer-bottom4{
+            width: 615px;
+            height:20px;
+            margin: 0  auto;
+            margin-top: 15px;
+            line-height: 15px;
+            text-align: center;
+        }
+        .footer-bottom5{
+            width: 290px;
+            height: 47px;
+            margin: 0 auto;
+            margin-top: 15px;
+        }
+        .footer-bottom1 ul li{
+            list-style: none;
+            float: left;
+            border-right: 1px solid #935454;
+            text-align: center;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .footer-bottom5-left{
+            width: 128px;
+            height: 47px;
+            float: left;
+
+
+        }
+        .footer-bottom5-left img{
+           display: block;
+            border: 0;
+        }
+        .bottom-right{
+            width: 162px;
+            height: 25px;
+            float: left;
+            margin-top: 11px;
+            _position: relative;
+        }
+        .bottom-ico{
+            width: 21px;
+            height: 25px;
+            background: url("images/gov.gif");
+            float: right;
+            _position: absolute;
+
+            display: block;
+            border: 0;
+            _margin-left: -70px;
+        }
+        .bottom-text{
+            width: 120px;
+            height: 25px;
+            line-height: 25px;
+            float:right;
+            text-align: center;
+            _position: absolute;
+            _margin-left: -50px;
+        }
+        .online1{
+            width: 40px;
+            height: 118px;
+            right: 0;
+            top:55%;
+            background: url("images/kdzq.png");
+            position: fixed;
+            cursor: pointer;
+        }
+        .online2{
+            width: 40px;
+            height: 117px;
+            right: 0;
+            top:75%;
+            background: url("images/kf.gif");
+            position: fixed;
+            z-index: 999;
+            display: block;
+
+        }
+        .online3{
+            width: 86px;
+            height: 22px;
+            right: -25px;
+            top: 89%;
+            background: url("images/online1.gif");
+            position: fixed;
+            _position: absolute;
+        }
+        .online4{
+            width: 86px;
+            height: 22px;
+            right: -25px;
+            top: 84.5%;
+            position: fixed;
+
+        }
+        .online5{
+            width: 86px;
+            height: 22px;
+            display: block;
+            right: -25px;
+            top: 80%;
+            position: fixed;
+
+        }
+
+    </style>
+</head>
+<body>
+  <div class="top-bar">
+      <div class="top-bar-content">
+          <div class="top-bar-left1">ENGLISH</div>
+          <div class="top-bar-left2">政企客户</div>
+          <div class="top-bar-right">
+              <ul>
+                  <li style="width: 61px"><div class="person"></div><div class="text"><a href="">登陆</a></div></li>
+                  <li style="width: 80px;border-right:none "><div class="phone"></div><div class="text2"><a
+                          href="">手机营业厅</a></div></li>
+                  <li style="width: 48px"><img src="images/new.gif"></li>
+                  <li><a href="">积分商城</a></li>
+                  <li><a href="">关于中国移动</a></li>
+                  <li style="border-right: none" ><a href="">联系我们</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+   <div class="bar-bottom">
+       <div class="logo"></div>
+       <a href=""><div class="home"><img src="images/x.gif">西安</div></a>
+       <div class="search">
+           <div class="search-input">
+               <div class="input1"><input type="text" id="input2" value="0元领宽带，领宽带红包" ></div>
+               <a href=""><div class="input1-bottom"><img src="images/search.png"> 搜索</div></a>
+           </div>
+           <div class="search-bottom">
+               <ul>
+                   <li><a href="" style="color:#E40077">资费专区</a></li>
+                   <li><a href="">宽带</a></li>
+                   <li><a href=""style="color:#E40077">终端狂欢购</a></li>
+                   <li><a href="">积分当钱花</a></li>
+                   <li><a href="">合约机</a></li>
+                   <li><a href=""style="color:#E40077">彩铃</a></li>
+               </ul>
+           </div>
+       </div>
+   </div>
+<div class="nav">
+    <div class="nav1"><a href="">首页</a></div>
+   <div class="nav2"><a href="">移动商城</a></div>
+   <div class="nav3"><a href="">我的移动</a></div>
+   <div class="nav4"><a href="">网上营业厅</a></div>
+   <div class="nav5"><a href="">服务与支持</a></div>
+</div>
+<div class="banner">
+    <div class="banner-left">
+        <div class="left1">直达移动商城</div>
+        <div class="left2"><div class="ico1"></div><div class="text3"><a href="">买手机</a></div></div>
+        <div class="left3"><div class="ico2"></div><div class="text3"><a href="">办套餐</a></div></div>
+        <div class="left4"><div class="ico3"></div><div class="text3"><a href="">办业务</a></div></div>
+        <div class="left5"><div class="ico4"></div><div class="text3"><a href="">挑配件</a></div></div>
+        <div class="left6"><div class="ico5"></div><div class="text4"><a href="">个人中心</a></div></div>
+
+    </div>
+    <div class="banner-center">
+        <div class="banner common clear">
+            <ul id="pr" class="banner_list clear">
+
+                <li><a href=""><img src="images/banner1.jpg"> </a>
+                <li><a href=""><img src="images/banner2.jpg"> </a></li>
+                <li><a href=""><img src="images/banner3.jpg"> </a></li>
+                <li><a href=""><img src="images/banner4.jpg"> </a></li>
+
+            </ul>
+            <div class="circle_box clear">
+                <div class="circle circle_active"></div>
+                <div class="circle" ></div>
+                <div class="circle"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="buttom-left" id="left"></div>
+        <div class="buttom-right" id="right"></div>
+    </div>
+    <div class="banner-right">
+        <div class="banner-right-top">
+            <a href=""><div class="banner-box">
+                <div class="box-top"><img src="images/ico6.gif"></div>
+                <div class="box-bottom">话费查询</div>
+            </div></a>
+            <a href=""><div class="banner-box">
+                <div class="box-top1"><img src="images/ico7.gif"></div>
+                <div class="box-bottom1">流量查询</div>
+                <div class="hot1">热</div>
+            </div></a>
+            <a href=""><div class="banner-box">
+                <div class="box-top2"><img src="images/ico8.png"></div>
+                <div class="box-bottom2">国际/港澳台
+                </div>
+            </div></a>
+            <a href=""><div class="banner-box">
+                <div class="box-top3"><img src="images/ico9.gif"></div>
+                <div class="box-bottom3">积分兑换
+
+                </div>
+            </div></a>
+            <a href=""><div class="banner-box
+">
+                <div class="box-top4"><img src="images/ico10.gif"></div>
+                <div class="box-bottom4">优惠促销</div>
+                <div class="hot2">惠</div>
+            </div></a>
+            <a href=""><div class="banner-box">
+                <div class="box-top5"><img src="images/ico11.jpg"></div>
+                <div class="box-bottom5">业务办理</div>
+            </div></a>
+        </div>
+        <div class="banner-right-bottom">
+            <div class="price">
+                <div class="price1">充值交费</div>
+                <div class="price2"> 9.95折</div>
+            </div>
+            <div class="price-input">
+                <div class="input3"><input type="text" id="input4" value="请输入手机号码"></div>
+            </div>
+            <div class="price-input1">
+                <div class="input5">
+                    <a href=""><div class="input6">30元</div></a>
+                    <a href=""><div class="input6"  style="background:#e40077;color: #fff">50元</div></a>
+                    <a href=""><div class="input6">100元</div></a>
+                    <a href=""><div class="input6">300元</div></a>
+                    <a href=""> <div class="input6" style="margin-right: 0">500元</div></a>
+                </div>
+            </div>
+            <div class="price-submit"><a href="">立即充值</a></div>
+        </div>
+    </div>
+</div>
+<div class="product">
+    <div class="product-content">
+        <ul id="list">
+            <li><a href=""><img src="images/list1.jpg"> </a></li>
+            <li><a href=""><img src="images/list2.jpg"> </a></li>
+            <li><a href=""><img src="images/lis3.jpg"> </a></li>
+            <li style="padding-right: 0"><a href=""><img src="images/list4.jpg"> </a></li>
+        </ul>
+        <div class="product-ico1"></div>
+        <div class="product-ico2"></div>
+    </div>
+</div>
+  <div class="content">
+      <div class="content-top">
+          <div class="content-top-left"> 4G专区</div>
+          <div class="content-top-right"><a href="">产看更多&gt</a></div>
+      </div>
+      <div class="product1"><a href=""><img src="images/product1.jpg"></a></div>
+      <div class="product-right">
+          <ul>
+              <li><a href="">
+                  <div class="product-right-top1"><div class="product-right-top11"><a href="">+2元=飞享套餐半价</a></div></div>
+                  <div class="product-right-top2"><div class="product-right-top22"><a href="">28/38/58/88/138档随您选</a></div></div>
+                  <div class="product-right-img"><a href=""><img src="images/product11.jpg"></a></div>
+              </a></li>
+              <li style="background: #efefef"><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">4G套餐</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">加速加量不加价</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product22.jpg"></a></div>
+              </a>
+              </li>
+              <li style="width: 302px;border-right: 0"><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">流量加量不加价</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">流量加量不加价</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product33.jpg"></a></div>
+              </a>
+              </li>
+              <li style="background: #efefef"><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">高清语音（VoLTE）</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">延时，高品质，通话上网两不误</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product44.jpg"></a></div>
+              </a>
+              </li>
+              <li><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">出门在外，不愁漫游！</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">省内/省际/全国，轻松满足</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product55.gif"></a></div>
+              </a>
+              </li>
+              <li style="background: #efefef;width: 302px;border-right: 0 "><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">4G手机</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">4G手机　品牌、厂家手机优惠大汇</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product66.jpg"></a></div>
+              </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+    <div class="product-mobile">
+        <div class="content-top">
+            <div class="content-top-left"> 买手机</div>
+            <div class="content-top-right"><a href="">查看更多&gt</a></div>
+            <div class="mobile">
+                <div class="mobile1">
+                    <div class="mobile-top">
+                        <div class="mobile-left">
+                            <a href=""><div class="mobile-text1">魅族魅蓝5</div></a>
+                            <a href=""><div class="mobile-text2">正面指纹识别</div></a>
+                            <a href=""><div class="mobile-text3">￥699</div></a></div>
+                        <a href=""><div class="mobile-right"></div></a>
+                    </div>
+                    <a href=""> <div class="mobile-bottom"><img src="images/mobile-list1.jpg"></div></a>
+                </div>
+                <div class="mobile1">
+                    <div class="mobile-top">
+                        <div class="mobile-left">
+                            <a href=""><div class="mobile-text1">华为P9</div></a>
+                            <a href=""><div class="mobile-text2">一上手，就爱不释手！</div></a>
+                            <a href=""><div class="mobile-text3">￥2510</div></a></div>
+                        <a href=""><div class="mobile-right"><img src="images/hot1.png"> </div></a>
+                    </div>
+                    <a href=""><div class="mobile-bottom"><img src="images/mobile-list1.jpg"></div></a>
+                </div>
+                <div class="mobile1">
+                    <div class="mobile-top">
+                        <div class="mobile-left">
+                            <a href=""><div class="mobile-text1">中国移动N2/M836</div></a>
+                            <a href=""><div class="mobile-text2">金属机身，双卡双待！</div></a>
+                            <a href=""><div class="mobile-text3">￥1499</div></a></div>
+                        <a href=""><div class="mobile-right"><img src="images/hot2.png" ></div></a>
+                    </div>
+                    <a href=""><div class="mobile-bottom"><img src="images/mobile-list1.jpg"></div></a>
+                </div>
+                <div class="mobile1">
+                    <div class="mobile-top">
+                        <div class="mobile-left">
+                            <a href=""><div class="mobile-text1">华为荣耀6x</div></a>
+                            <a href=""><div class="mobile-text2">双卡双待双镜头！</div></a>
+                            <a href=""><div class="mobile-text3">￥1699</div></a></div>
+                        <a href=""><div class="mobile-right"><img src="images/hot3.png"> </div></a>
+                    </div>
+                    <a href=""><div class="mobile-bottom"><img src="images/mobile-list1.jpg"></div></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   <!--底部-->
+  <div class="content">
+      <div class="content-top">
+          <div class="content-top-left"> 业务推荐</div>
+          <div class="content-top-right"><a href="">产看更多&gt</a></div>
+      </div>
+      <div class="product1"><a href=""><img src="images/product2.jpg"></a></div>
+      <div class="product-right">
+          <ul>
+              <li><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">流量智能套餐</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">你的流量，自由决定，省钱省心！</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product77.jpg"></a></div>
+              </a></li>
+              <li ><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">夜间流量套餐包</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">夜间流量套餐包</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product88.jpg"></a></div>
+              </a>
+              </li>
+              <li style="width: 302px;border-right: 0"><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">与家人共享流量、通话</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">一人办理，大家齐分享</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product99.jpg"></a></div>
+              </a>
+              </li>
+              <li><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">加油升级啦！放心用流量</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">10元100M，累计60可用1G</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product10.jpg"></a></div>
+              </a>
+              </li>
+              <li><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">4G流量包，11款任您选</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">总有一款是你的菜!</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product20.jpg"></a></div>
+              </a>
+              </li>
+              <li style="width: 302px;border-right: 0"><a href="">
+                  <a href=""><div class="product-right-top1"><div class="product-right-top11">4G飞享套餐低至18元啦！</div></div></a>
+                  <a href=""><div class="product-right-top2"><div class="product-right-top22">现在用，还送一年通话+流量！</div></div></a>
+                  <div class="product-right-img"><a href=""><img src="images/product30.jpg"></a></div>
+              </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div class="footer">
+      <ul>
+          <li class="list1">服务渠道
+              <ul class="list2">
+                  <li><a href="">自助终端</a></li>
+                  <li><a href="">10086热线</a></li>
+                  <li><a href="">实体营业厅</a></li>
+                  <li><a href="">短信营业厅</a></li>
+                  <li><a href="">网上营业厅</a></li>
+                  <li><a href="">掌上/手机营业厅</a></li>
+              </ul>
+          </li>
+          <li class="list1">站点导航
+              <ul class="list2">
+              <li><a href="">MM</a></li>
+              <li><a href="">飞信</a></li>
+              <li><a href="">和包</a></li>
+              <li><a href="">和阅读</a></li>
+              <li><a href="">139邮箱</a></li>
+              <li><a href="">咪咕音乐</a></li>
+          </ul>
+          </li>
+          <li class="list1">快捷服务
+              <ul class="list2">
+                  <li><a href="">飞享套餐欢乐购</a></li>
+                  <li><a href="">流量安心包</a></li>
+                  <li><a href="">10元1G夜间流量</a></li>
+                  <li><a href="">30M-11G流量包</a></li>
+                  <li><a href="">宽带低至0元</a></li>
+                  <li><a href="">+1元，最高得2G
+                  </a></li>
+              </ul>
+          </li>
+          <li class="list1">常见问题
+              <ul class="list2">
+                  <li><a href="">投诉建议</a></li>
+                  <li><a href="">常见资费问题</a></li>
+                  <li><a href="">常见网络问题</a></li>
+                  <li><a href="">服务密码专区</a></li>
+                  <li><a href="">商城退货原则</a></li>
+                  <li><a href="">商城退款说明</a></li>
+              </ul>
+          </li>
+          <li class="list1" style="padding-right: 0">商城服务指南
+              <ul class="list2">
+                  <li><a href="">购物指南</a></li>
+                  <li><a href="">付款方式</a></li>
+                  <li><a href="">物流配送</a></li>
+                  <li><a href="">售后服务</a></li>
+                  <li><a href="">个人中心</a></li>
+              </ul>
+          </li>
+      </ul>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom1">
+        <ul>
+            <li><a href="">新闻中心</a></li>
+            <li><a href="">诚聘英才</a></li>
+            <li><a href="">采购信息</a></li>
+            <li><a href="">企业合作 </a></li>
+            <li><a href="">站点导航</a></li>
+            <li><a href=""> 中国移动研究院</a></li>
+            <li><a href="">中国移动设计院 </a></li>
+            <li><a href="">网站地图</a></li>
+            <li style="border-right: 0"><a href="">友情链接</a></li>
+        </ul>
+    </div>
+      <div class="footer-bottom2">掌上营业厅：<a href="">wap.10086.cn </a>语音自助服务：10086 短信营业厅：
+          10086 <a href="">自助终端</a><a href="">营业厅</a> <a href="">手机营业厅下载</a></div>
+      <div class="footer-bottom3">Copyright©1999-2016  中国移动  版权所有</div>
+      <div class="footer-bottom4">中华人民共和国增值电信业务经营许可证
+          经营许可证编号：A2.B1.B2-20100001</div>
+      <div class="footer-bottom5">
+          <div class="footer-bottom5-left"><a href=""><img src="images/knetSealLogo.png "></a></div>
+          <div class="footer-bottom5-right">
+              <div class="bottom-right">
+
+                  <div class="bottom-text">京ICP备05002571号</div>
+                  <div class="bottom-ico"></div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+  <script>
+      window.onload = function(){
+              var oUl = document.getElementById('pr');
+              var oLeft = document.getElementById('left');
+              var oRight = document.getElementById('right');
+              var circles = document.getElementsByClassName('circle');
+              var banner = document.getElementsByClassName('banner');
+              var index = 0;
+
+
+              oLeft.onclick = function(){
+                  circles[index+1].className = 'circle_active';
+                  var ul_left = oUl.offsetLeft;
+
+                  if(ul_left == -2220){
+                      oUl.style.left=0+'px';
+                  }else{
+                      oUl.style.left=ul_left - 740 + 'px';
+                  }
+
+              }
+              oRight.onclick = function (){
+                  var ul_left = oUl.offsetLeft;
+                  if(ul_left==0){
+                      oUl.style.left=-2220+'px';
+                  }else{
+                      oUl.style.left=ul_left + 740 + 'px';
+                  }
+              }
+
+
+              var timer = setInterval(move_right,2000);
+
+
+              function move_right(){
+                  var ul_left = oUl.offsetLeft;
+
+                  if(ul_left == -2220){
+                      oUl.style.left=0+'px';
+                  }else{
+                      oUl.style.left=ul_left - 740 + 'px';
+                  }
+              }
+
+          }
+              </script>
+          </body>
+</html>

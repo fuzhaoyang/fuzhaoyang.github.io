@@ -1,0 +1,354 @@
+html{
+    font-family:"微软雅黑";
+    font-size:100px;
+}
+body,h1,h2,h3,h4,h5,h6,ul,li,input{
+    margin:0;
+    padding:0;
+    list-style:none;
+    /*overflow:hidden;*/
+}
+*{
+    box-sizing:border-box;
+
+}
+a{
+    text-decoration:none;
+    margin:0;
+    padding:0;
+}
+img{
+    padding:0;
+    margin:0;
+}
+@media screen and (max-width:375px){
+    html{
+        font-size:50px;
+    }
+}
+@media screen and (max-width:360px){
+    html{
+        font-size:48px;
+    }
+}
+@media screen and (max-width:320px){
+    html{
+        font-size:42.666667px;
+    }
+}
+.top {
+    width: 750px;
+    height: 140px;
+    padding-top: 1px;
+    background: #29a6dc;
+    margin: 0 auto;
+    position: relative;
+}
+.top-next a{
+    display:block;
+    width:50px;height:50px;
+    background:url(../image/houtui.png);
+    position:absolute;
+    left:10px;bottom:21px;
+}
+
+.bottom{
+    width:750px;height:auto;
+    background:#f2f2f2;
+    /*background:#333;*/
+    margin:0 auto;
+    padding-top:1px;
+}
+.show{
+    width:687px;height:519px;
+    background:#fff;
+    padding-top:1px;
+    margin:0 auto;
+    margin-top:12px;
+    border-radius:15px;
+    box-shadow:0 0 10px 3px #f3f7ff;
+}
+.show-bkd{
+    width:687px;height:274px;
+    margin-top:54px;
+}
+.show-left{
+    width:255px;height:213px;
+    margin-left:29px;
+    float:left;
+}
+.show-right{
+    width:403px;height:274px;
+    float:left;
+}
+.show-right-font{
+    width:369px;height:233px;
+    margin-left:34px;
+    padding-top:20px;
+}
+.show-right-font1{
+    width:369px;height:32px;
+    line-height:32px;
+    font-size:0.26rem;
+}
+.show-right-font2{
+    width:369px;height:26px;
+    line-height:26px;
+    font-size:0.16rem;
+    color:#3f3f3f;
+}
+.show-right-font2 span{
+    font-size:0.12rem;
+    color:#444444;
+}
+.show-right-font3{
+    width:369px;height:31px;
+    line-height:31px;
+    font-size:0.2rem;
+    color:#a6a6a6;
+}
+.show-right-font4{
+    width:369px;height:23px;
+    line-height:31px;
+    font-size:0.2rem;
+    color:#a6a6a6;
+}
+.show-right-img5{
+    width:369px;height:31px;
+    padding-top:3px;
+}
+.show-right-x1{
+    width:26px;height:25px;
+    background:url(../image/x1.png);
+    float:left;
+}
+.show-right-font6{
+    width:369px;height:70px;
+    font-size:0.17rem;
+    color:#e2e2e2;
+}
+.show-right-label{
+    width:310px;height:41px;
+    margin-left:18px;
+    padding-top:4px;
+}
+.show-right-label div{
+    width:86px;height:33px;
+    background:#67e479;
+    border-radius:16px;
+    margin:0 7px;
+    line-height:33px;
+    text-align:center;
+    font-size:0.24rem;
+    float:left;
+    color:#fff;
+}
+.two-an{
+    width:636px;height:69px;
+    margin:0 auto;
+    margin-top:10px;
+}
+.two-an a{
+    display:block;
+    width:260px;height:69px;
+    background:#fff;
+    border-radius:68px;
+    margin:0 29px;
+    float:left;
+    box-shadow:0 0 10px 3px #f2f7ff;
+}
+.two-img1{
+    width:45px;height:50px;
+    margin-top:9px;
+    margin-left:46px;
+    float:left;
+}
+.two-img1 img{
+    display:block;
+    width:45px;height:50px;
+}
+.two-font1{
+    width:98px;height:69px;
+    line-height:69px;
+    font-size:0.24rem;
+    margin-left:19px;
+    float:left;
+    color:#2d2d2d;
+}
+.one-an{
+    width:636px;height:69px;
+    margin:0 auto;
+    margin-top:22px;
+}
+.one-an a{
+    display:block;
+    width:270px;height:69px;
+    background:#29a6dc;
+    border-radius:68px;
+    margin:0 auto;
+    line-height:69px;
+    text-align:center;
+    font-size:0.28rem;
+    box-shadow:0 0 10px 3px #f2f7ff;
+    color:#fff;
+    position:relative;
+}
+.d{
+    width:9px;height:9px;
+    border-radius:50%;
+    background:#fff;
+    position:absolute;
+    top:0;bottom:0;margin:auto;
+    left:29px;
+}
+.d1{
+    width:9px;height:9px;
+    border-radius:50%;
+    background:#fff;
+    position:absolute;
+    top:0;bottom:0;margin:auto;
+    right:29px;
+}
+.label{
+    width:636px;height:60px;
+    background:#f2f2f2;
+    margin:0 auto;
+    margin-top:35px;
+}
+.label-left{
+    width:40px;height:60px;
+    background:url(../image/pen.png);
+    margin-left:17px;
+    float:left;
+}
+.label-right{
+    width:500px;height:60px;
+    margin-left:14px;
+    float:left;
+}
+.label-right-font{
+    width:500px;height:30px;
+    line-height:30px;
+    font-size:28px;
+}
+.label-right-font1{
+    width:500px;height:20px;
+    line-height:20px;
+    font-size:14px;
+    color:#252525;
+    margin-top:10px;
+}
+.shuping{
+    width:690px;height:154px;
+    background:#fdfdfd;
+    margin:0 auto;
+    margin-top:32px;
+    border-radius:5px;
+    box-shadow:0 0 10px 5px #f2f7ff;
+}
+.sp-left{
+    width:82px;height:81px;
+    margin-top:25px;
+    margin-left:14px;
+    float:left;
+}
+.sp-left img{
+    display:block;
+    width:82px;height:81px;
+}
+.sp-right{
+    width:567px;height:123px;
+    margin-top:25px;
+    margin-left:20px;
+    float:left;
+}
+.sp-right-font{
+    width:504px;height:57px;
+    padding-left:14px;
+    font-size:20px;
+    color:#989898;
+}
+.sp-right-xh{
+    width:504px;height:3px;
+    border-bottom:3px dotted #b5b5b5;
+    margin-top:16px;
+    margin-left:14px;
+}
+.sp-right-cont{
+    width:548px;height:36px;
+    margin-top:9px;
+}
+.sp-right-img{
+    width:120px;height:36px;
+    float:left;
+}
+.sp-right-img1{
+    width:36px;height:36px;
+    background:#fff;
+    border-radius:50%;
+    padding-top:1px;
+    float:left;
+    box-shadow:0 0 10px 5px #f2f7ff;
+}
+.sp-right-img1 img{
+  display:block;
+    margin:0 auto;
+    margin-top:9px;
+}
+.sp-right-font1{
+    width:80px;height:36px;
+    line-height:36px;
+    margin-left:4px;
+    color:#a9a6a6;
+    font-size:13px;
+    float:left;
+}
+.sp-right-imgr{
+    width:120px;height:36px;
+    float:right;
+}
+.one-anb{
+    width:636px;height:39px;
+    margin:0 auto;
+    margin-top:22px;
+}
+.one-anb a{
+    display:block;
+    width:222px;height:39px;
+    background:#29a6dc;
+    border-radius:13px;
+    margin:0 auto;
+    line-height:39px;
+    text-align:center;
+    font-size:0.21rem;
+    box-shadow:0 0 10px 3px #f2f7ff;
+    color:#fff;
+    position:relative;
+}
+.shuqian{
+    width:690px;height:85px;
+    background:#fff;
+    border-radius:8px;
+    box-shadow:0 0 10px 4px #f2f7ff;
+    margin:0 auto;
+    margin-top:30px;
+    padding-top:1px;
+}
+.shuq-cont{
+    width:148px;height:36px;
+    margin:0 auto;
+    margin-top:24px;
+}
+.shuq-cont img{
+    display:block;
+    width:36px;height:36px;
+    float:left;
+}
+.shuq-font1{
+    width:100px;height:36px;
+    font-size:22px;
+    line-height:36px;
+    margin-left:12px;
+    color:#494949;
+    float:left;
+}

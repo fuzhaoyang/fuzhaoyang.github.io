@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+       .sence{
+       	width: 400px;height: 400px;
+       	border: 2px solid red;
+       	position: relative;
+       	margin:0 auto;
+       	/*transform-style:preserve-3d;
+       	preserve:1000px;*/
+       	
+       }
+       .demo{
+       	width: 100px;height: 100px;
+       	background: gray;
+       	transition:all 5s;
+       	margin-top: 150px;
+       	margin-left: 150px;
+       	position: absolute;
+        transform-style:preserve-3d;
+        transform-origin:center center 100px;
+       }
+       .face1{
+       	width: 100px;height: 100px;
+       	background: pink;
+       	position: absolute;
+       	left: 0;top: 0;
+       	transform-origin:left;
+       	transform:rotateY(-90deg);
+       }
+       .face2{
+       	width: 100px;height: 100px;
+       	background: yellow;
+       	position: absolute;
+       	left: 0;top: 0;
+       	transform-origin:right;
+       	transform:rotateY(90deg);
+       }
+       .face3{
+       	width: 100px;height: 100px;
+       	background: purple;
+       	position: absolute;
+       	left: 0;top: 0;
+       	transform-origin:bottom;
+       	transform:rotateX(-90deg);
+       }
+       .face4{
+       	width: 100px;height: 100px;
+       	background: red;
+       	position: absolute;
+       	left: 0;top: 0;
+       	transform-origin:top;
+       	transform:rotateX(90deg);
+       }
+
+       .face5{
+       	width: 100px;height: 100px;
+       	background:#000;
+       	position: absolute;
+       	left: 0;top: 0;
+       	transform-origin:bottom;
+       transform:translateZ(100px);
+       }
+       .face6{
+       	width: 100px;height: 100px;
+       	background: green;
+       	position: absolute;
+       	left: 0;top: 0;
+       	transform-origin:bottom;
+       transform:rotateX(-90deg);
+       }
+       .sence:hover .demo{
+       	transform:rotateY(1080deg) rotateX(1080deg);
+       	/*transform:translateY(100px);*/
+       	/*transform:rotateX(360deg);
+*/       }
+	</style>
+</head>
+<body>
+	<div class="sence" >
+		 <div class="demo">
+			<div class="face1"></div>
+			<div class="face2"></div>
+			<div class="face2"></div>
+			<div class="face4"></div>
+			<div class="face5"></div>
+			<div class="face6"></div>
+		</div>
+	</div>
+</body>
+</html>

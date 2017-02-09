@@ -1,0 +1,89 @@
+body,ul,ol,dl,h1,h2,h3,h4,h5,h6,p,input{
+    padding: 0;margin: 0;list-style: none;
+}
+img{border: none;
+
+}
+a{
+    text-decoration:none;
+}
+body{
+    font-size: 12px;
+    font-family: "宋体"; color:#333;
+}
+/*banner*/
+.box{
+   width:100%;height:auto;
+    background:#F2F2F2;
+}
+.banner{
+    width: 100%;height: 400px;
+    background: red;
+    background: url("../images/banner.jpg");
+    background-position: center;
+    background-size: cover;
+    /*position: relative;*/
+}
+.wenzi{
+    width: 100%;height: 74px;
+   /*background:red;*/
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 150px;
+    font-size: 35px;
+    color: #FFFFFF;
+}
+.wenzi a{
+    color: #fff;
+}
+.wenzi a:hover{
+    text-decoration: underline;
+}
+.tu{
+    width: 100%;height:72px;
+    /*background: red;*/
+    padding-top: 215px;
+}
+.one{
+    width: 80px;height: 70px;
+    /*background: orange;*/
+    margin: 0 auto;
+    background: url("../images/xiaotubiao.png");
+    background-size: cover;
+}
+/*图文部分*/
+#main{
+    margin-top: 90px;
+}
+
+.content{
+    background: #fff;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+.content>a{
+    display: block;
+    width: 100%;
+    padding-top:62.5%;
+    position: relative;
+}
+.content>a>img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    left:0;
+    top:0;
+}
+.content>h2{
+    text-align: center;
+    line-height: 30px;
+
+}
+.content>h2>a {
+    color: #333;
+}
+.content>h2>a:hover{
+    color: #000;
+    text-decoration: underline
+}

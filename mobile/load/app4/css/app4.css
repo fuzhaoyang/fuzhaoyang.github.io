@@ -1,0 +1,184 @@
+html{
+    font-family:"微软雅黑";
+    font-size:100px;
+}
+body,h1,h2,h3,h4,h5,h6,ul,li,input{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+*{
+    box-sizing:border-box;
+
+}
+a{
+    text-decoration:none;
+    margin:0;
+    padding:0;
+}
+img{
+    padding:0;margin:0;
+}
+@media screen and (max-width:375px){
+    html{
+        font-size:50px;
+    }
+}
+@media screen and (max-width:360px){
+    html{
+        font-size:48px;
+    }
+}
+@media screen and (max-width:320px){
+    html{
+        font-size:42.666667px;
+    }
+}
+.top{
+    width:750px;height:476px;
+    padding-top:1px;
+    background:#29a6dc;
+    margin:0 auto;
+    position:relative;
+}
+.top-font{
+    width:130px;height:34px;
+    line-height:34px;
+    margin:0 auto;
+    margin-top:76px;
+    text-align:center;
+    font-size:0.32rem;
+    color:#f2f2f2;
+}
+.top-img{
+    width:175px;height:107px;
+    background:url(../image/denglu.png);
+    margin:0 auto;
+    margin-top:37px;
+}
+.top-circle a{
+    display:block;
+    width:44px;height:44px;
+}
+.top-circle{
+    width:44px;height:44px;
+    background:#fafafa;
+    text-align:center;
+    border:2px solid #076cbe;
+    border-radius:50%;
+    font-size:0.3rem;
+    position:absolute;
+    top:67px;left:25px;
+}
+.bottom{
+    width:750px;height:858px;
+    padding-top:1px;
+    background:#f2f2f2;
+    margin:0 auto;
+}
+
+.bottom-font{
+    width:580px;height:25px;
+    margin-top:145px;
+    margin-left:77px;
+    font-size:0.24rem;
+    color:#0a196b;
+    line-height:25px;
+}
+.bottom-font1{
+    width:135px;height:25px;
+    margin-top:18px;
+    margin-left:555px;
+    font-size:0.24rem;
+    color:#0a196b;
+    line-height:25px;
+}
+
+.bottom-content{
+    width:616px;height:88px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:100px;
+    position:relative;
+}
+#bottom-input{
+    display:block;
+    width:616px;height:88px;
+    border:1px solid #3a91fd;
+    border-radius:44px;
+    padding-left:122px;
+    font-size:0.26rem;
+
+}
+.bottom-content img{
+    display:block;
+    width:44px;height:44px;
+    position:absolute;
+    top:0;bottom:0;
+    margin:auto;
+    margin-left:44px;
+}
+.bottom-content1{
+    width:616px;height:88px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:38px;
+    position:relative;
+}
+.bottom-content1 img{
+    display:block;
+    width:44px;height:44px;
+    position:absolute;
+    top:0;bottom:0;
+    margin:auto;
+    margin-left:44px;
+}
+/*注册*/
+.bottom-a{
+    width:520px;height:25px;
+    margin:0 auto;
+    margin-top:36px;
+}
+.denglu{
+    width:140px;height:25px;
+    float:left;
+    line-height:25px;
+
+}
+.zhuce{
+    width:140px;height:25px;
+    float:right;
+    line-height:25px;
+
+}
+.bottom-a img{
+    width:25px;height:25px;
+    float:left;
+}
+.bottom-a div{
+    width:88px;height:25px;
+    margin-left:20px;
+    font-size:20px;
+    float:left;
+    color:#666666;
+}
+
+/*提交*/
+.bottom-submit{
+    width:564px;height:68px;
+    margin:0 auto;
+    overflow:hidden;
+    margin-top:96px;
+    position:relative;
+}
+#bottom-input1{
+    display:block;
+    width:564px;height:68px;
+    background:#3abffd;
+    border-radius:34px;
+    border:none;
+    font-size:0.26rem;
+    color:#fff;
+    cursor:pointer;
+}
+

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>苹果官网</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <link rel="stylesheet" href="css.css">
+
+    <style>
+
+    body {
+        color: #5a5a5a;
+        background: #F2F2F2;
+        margin: 0;
+        padding: 0;
+        overflow-X: hidden;
+    }
+    *{
+        box-sizing:border-box;
+    }
+    .box{
+        width: 100%;
+        padding: 1px;
+        margin-top: -55px;
+    }
+    .box .list{
+        width: 25%;
+        height:200px;
+        float: left;
+        border-right:1px solid #fff ;
+        background-position: center;
+    }
+    .box:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .box .list:nth-child(1){
+        background-image: url("images/xy1.jpg");
+    }
+    .box .list:nth-child(2){
+        background-image: url("images/xy2.jpg");
+    }
+    .box .list:nth-child(3){
+        background-image: url("images/xy3.jpg");
+    }
+    .box .list:nth-child(4){
+        background-image: url("images/xy4.jpg");
+        border-right: none;
+    }
+    @media screen and (max-width: 1068px){
+        .box .list{
+            width: 50%;
+            height: 200px;
+            background-position: center;
+        }
+        .box .list:nth-child(1){
+            background-image: url("images/xy1.jpg");
+            border-right: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+        }
+        .box .list:nth-child(2){
+            background-image: url("images/xy2.jpg");
+            border-right: none;
+        }
+        .box .list:nth-child(3){
+            background-image: url("images/xy3.jpg");
+            border-right: 1px solid #fff;
+        }
+        .box .list:nth-child(4){
+            background-image: url("images/xy4.jpg");
+            border: none;
+        }
+    }
+    @media screen and (max-width: 735px){
+        .box .list{
+            width: 100%;
+            height: 200px;
+            background-position: center;
+            border-bottom: 1px solid #fff;
+        }
+        .box .list:nth-child(1){
+            background-image: url("images/xy1.jpg");
+
+        }
+        .box .list:nth-child(2){
+            background-image: url("images/xy2.jpg");
+        }
+        .box .list:nth-child(3){
+            background-image: url("images/xy3.jpg");
+        }
+        .box .list:nth-child(4){
+            background-image: url("images/xy4.jpg");
+        }
+    }
+    nav{
+        margin-left: 50px;
+    }
+    .nav li{
+        padding: 0 30px;
+    }
+    .navbar-brand img{
+        width: 40px;
+        height: 40px;
+        display: block;
+        margin-top: -8px;
+        margin-right: -15px;
+    }
+
+    .carousel {
+        height: 500px;
+        margin-bottom: 60px;
+    }
+
+    .carousel .item {
+        height: 500px;
+        background-color: #000;
+    }
+
+    .carousel .item img {
+        width: 100%;
+    }
+
+    .carousel-caption {
+        z-index: 10;
+    }
+
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 1.8;
+    }
+    .tap .ht{
+        margin-top: -60px;
+        height:100px;
+        line-height: 100px;
+        font-size:28px;
+        text-align: center;
+        background: #EEEEEE;
+        color: #000;
+
+    }
+
+    .bg-success{
+        display: inline-block;
+        height: 100px;
+        width: 100%;
+        line-height: 100px;
+    }
+
+    .summary {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .summary .col-md-4 {
+        margin-bottom: 20px;
+        text-align: center;
+        t
+    }
+
+    .z1{
+        margin-top: -150px;
+        color: #FFF;
+    }
+
+    .feature-divider {
+        margin: 40px 0;
+    }
+
+    .feature {
+        padding: 30px 0;
+    }
+
+    .feature-heading {
+        font-size: 50px;
+        color: #2a6496;
+    }
+
+    .feature-heading .text-muted {
+        font-size: 28px;
+    }
+
+
+    @media (max-width: 768px) {
+
+        .summary {
+            padding-right: 3px;
+            padding-left: 3px;
+        }
+
+        .carousel {
+            height: 300px;
+            margin-bottom: 30px;
+        }
+
+        .carousel .item {
+            height: 300px;
+        }
+
+        .carousel img {
+            min-height: 300px;
+        }
+
+        .carousel-caption p {
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+        .feature-heading {
+            font-size: 34px;
+        }
+
+        .feature-heading .text-muted {
+            font-size: 22px;
+        }
+    }
+
+    @media (min-width: 992px) {
+        .feature-heading {
+            margin-top: 120px;
+        }
+    }
+        .bottom-top{
+            width: 980px;
+            height: 50px;
+            margin: 0 auto;
+            border-bottom: 1px solid #E3E3E3;
+        }
+        .bottom-top p{
+            float: left;
+            line-height: 50px;
+            font-size: 12px;
+        }
+        .bottom-2{
+            width: 980px;
+            height: 300px;
+            margin: 0 auto;
+            border-bottom: 1px solid #E3E3E3;
+        }
+        .list1 a{
+            text-decoration: none;
+            font-size: 12px;
+            color: #333333;
+        }
+      .list1{
+          list-style: none;
+          float: left;
+          padding-right: 150px;
+          margin-top: 15px;
+          line-height: 22px;
+          margin-left: -40px;
+      }
+      @media screen and (max-width: 1068px){
+          .bottom-2{
+              width: 980px;
+              height: auto;
+          }
+          .list1{
+              padding-right:50px;
+              margin-left: auto;
+          }
+          .footer-top{
+              width: 100%;
+              height: 40px;
+          }
+
+      }
+    @media screen and (max-width: 735px){
+        .bottom-2{
+            width: 980px;
+            height:auto;
+        }
+        .footer-bottom11{
+            width: 100%;
+            clear: both;
+            height: auto;
+        }
+        .footer-bottom12{
+            width: 100%;
+            clear: both;
+            height: auto;
+        }
+        .footer-bottom13{
+            width: 300px;
+            height:44px;
+            float: left;
+            display: block;
+        }
+        .footer-top{
+            width: 100%;
+            height: 40px;
+            margin-left: 15px;
+        }
+        .bottom-top p{
+            float: left;
+            line-height: 50px;
+            font-size: 12px;
+            padding-left: 20px;
+        }
+
+
+
+    }
+
+
+
+    @font-face {
+        font-family: 'iconfont';
+        src: url('//at.alicdn.com/t/font_tffqc42fm1nyiudi.eot');
+        src: url('//at.alicdn.com/t/font_tffqc42fm1nyiudi.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_tffqc42fm1nyiudi.woff') format('woff'),
+        url('//at.alicdn.com/t/font_tffqc42fm1nyiudi.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_tffqc42fm1nyiudi.svg#iconfont') format('svg');
+    }
+    .icon{
+        font-family: "iconfont";
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .nav{
+        width: 100%;height: 45px;
+        background: #313131;
+        margin:0 auto;
+        -moz-user-select:none;
+        cursor: default;
+    }
+    .nav-inner{
+        width: 1000px;height:44px;
+        /*background: yellow;*/
+        margin:0 auto;
+        text-align: justify;
+    }
+    .nav-inner:after{
+        content:"";
+        display: inline-block;
+        width: 100%;
+    }
+
+    @font-face {
+        font-family: 'iconfont';  /* project id 223024 */
+        src: url('//at.alicdn.com/t/font_w377v9tqr2qyf1or.eot');
+        src: url('//at.alicdn.com/t/font_w377v9tqr2qyf1or.eot?#iefix') format('embedded-opentype'),
+        url('//at.alicdn.com/t/font_w377v9tqr2qyf1or.woff') format('woff'),
+        url('//at.alicdn.com/t/font_w377v9tqr2qyf1or.ttf') format('truetype'),
+        url('//at.alicdn.com/t/font_w377v9tqr2qyf1or.svg#iconfont') format('svg');
+    }
+    .icon{
+        font-family: 'iconfont';
+        line-height: 50px;
+        font-size: 14px;
+    }
+    #open{
+        display:none;
+        color:#fff;
+        cursor:pointer;
+    }
+
+    .mac{
+        height:44px;
+        line-height: 44px;
+        color: #fff;
+        display: inline-block;
+        font-size:14px;
+    }
+    .mac a{
+        color: #fff;
+        transition: all 0.5s;
+    }
+    .mac a:hover{
+        color: #969696;
+        text-decoration: none;
+    }
+    @media screen and (max-width:1068px) {
+        .nav-inner{
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+    @media screen and (max-width:735px) {
+        .hidden-s{
+            display:none;
+        }
+        #open{
+            display:inline-block;
+            transition:all 0.5s;
+        }
+        #open:hover{
+            color:#999;
+        }
+        .show-s:hover{
+            color:#999;
+        }
+        @font-face {
+            font-family: 'iconfont';  /* project id 222775 */
+            src: url('//at.alicdn.com/t/font_sso5y6x1gtvmfgvi.eot');
+            src: url('//at.alicdn.com/t/font_sso5y6x1gtvmfgvi.eot?#iefix') format('embedded-opentype'),
+            url('//at.alicdn.com/t/font_sso5y6x1gtvmfgvi.woff') format('woff'),
+            url('//at.alicdn.com/t/font_sso5y6x1gtvmfgvi.ttf') format('truetype'),
+            url('//at.alicdn.com/t/font_sso5y6x1gtvmfgvi.svg#iconfont') format('svg');
+        }
+        .icon-l{
+            font-family: 'iconfont';
+            line-height: 50px;
+        }
+    }
+    /*底部*/
+    .footer{
+        width:100%;height:auto;
+        background:#f2f2f2;
+    }
+    .footer .container{
+        width:980px;height:auto;
+        margin:0 auto;
+        clear: left;
+    }
+    .footer-box{
+        width:20%;height:260px;
+        float:left;
+    }
+    .footer-box ul{
+        list-style: none;
+        margin-left: -40px;
+    }
+    .footer-box li a{
+        color: #666;
+        font-size: 12px;
+        list-style: none;
+        line-height:24px;
+    }
+    .footer-box a:hover{
+        text-decoration:underline;
+    }
+    .add{
+        display:none;
+        float:right;
+    }
+    .footer-title{
+        display:block;
+        cursor:default;
+    }
+    @media screen and (max-width:1068px){
+        .footer .container{
+            width:100%;
+            padding-left:10px;
+        }
+        .footer-bottom{
+            width: 100%;
+            height: 30px;
+            margin: 0 auto;
+            line-height: 30px;
+
+        }
+        .footer-bottom11{
+            float: left;
+            width: 100%;
+        }
+        .footer-bottom12{
+            width: 100%;
+            clear: both;
+        }
+
+        .footer-bottom13{
+            float: left;
+        }
+        .footer-bottom22{
+            width: 500px;
+        }
+    @media screen and (max-width:735px){
+
+        .add{
+            display:inline-block;
+        }
+        .footer-box{
+            width:100%;
+            height:auto;
+
+        }
+        .footer-box .footer-title{
+            border-bottom:1px solid #E3E3E3;
+            height:38px;
+            line-height:38px;
+            padding-left:10px;
+            cursor:pointer;
+        }
+        .footer-box ul{
+            height:0;
+            overflow:hidden;
+        }
+
+        .footer-bottom12{
+            width: 100%;
+            margin-left: -100px;
+        }
+
+        .footer-bottom{
+            /*clear: both;*/
+        }
+
+    }
+
+
+     }
+    .footer-bottom{
+        width: 980px;
+        height: 30px;
+        margin: 0 auto;
+        line-height: 30px;
+
+    }
+    .footer-bottom11{
+        float: left;
+    }
+    .footer-bottom12{
+        width: 100%;
+    }
+    .footer-bottom12 ul li{
+       list-style: none;
+        float:left;
+        padding: 0 10px;
+        border-right:1px solid lightgray ;
+    }
+    .footer-bottom13{
+        margin-left: 200px;
+
+        float: right;
+    }
+
+    </style>
+
+</head>
+
+<body>
+<div class="nav">
+    <div class="nav-inner">
+        <div class="mac icon-l show-s" id="open">&#xe73f;</div>
+        <div class="mac icon"><a href="#">&#xe65a;</a></div>
+        <div class="mac hidden-s"><a href="#">MAC</a></div>
+        <div class="mac hidden-s"><a href="#">Ipad</a></div>
+        <div class="mac hidden-s"><a href="#">Iphone</a></div>
+        <div class="mac hidden-s"><a href="#">Watch</a></div>
+        <div class="mac hidden-s"><a href="#">TV</a></div>
+        <div class="mac hidden-s"><a href="#">Music</a></div>
+        <div class="mac hidden-s"><a href="#">Support</a></div>
+        <div class="mac icon hidden-s"><a href="#">&#xe606;</a></div>
+        <div class="mac icon"><a href="#">&#xe64b;</a></div>
+    </div>
+</div>
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/1.jpg" alt="1 slide">
+
+            <div class="container-fluid">
+
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/2.jpg" alt="2 slide">
+
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/3.jpg" alt="3 slide">
+
+            <div class="container">
+
+            </div>
+        </div>
+        <div class="item">
+            <img src="images/5.jpg" alt="4 slide">
+
+            <div class="container">
+
+            </div>
+        </div>
+
+
+    </div>
+    <a class="left carousel-control" href="#ad-carousel" data-slide="prev"><span
+            class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#ad-carousel" data-slide="next"><span
+            class="glyphicon glyphicon-chevron-right"></span></a>
+</div>
+<div class="box">
+    <a href="" class="list"></a>
+    <a href="" class="list"></a>
+    <a href="" class="list"></a>
+    <a href="" class="list"></a>
+  </div>
+ <div class="bottom-top">
+     <p>双镜头摄像头仅于 iPhone 7 Plus 提供。亮黑色外观仅于 128GB 及以上存储容量的机型提供。</p>
+ </div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-box">
+            <div class="footer-title">选购及了解
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">Mac</a></li>
+                <li><a href="#">iPad</a></li>
+                <li><a href="#">iPhone</a></li>
+                <li><a href="#">Watch</a></li>
+                <li><a href="#">TV</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">iTunes</a></li>
+                <li><a href="#">iPod</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Gift Cards</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <div class="footer-title">Apple Store 商店
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">查找零售店</a></li>
+                <li><a href="#">Genius Bar 天才吧</a></li>
+                <li><a href="#">讲座和学习</a></li>
+                <li><a href="#">青少年活动</a></li>
+                <li><a href="#">Apple Store App</a></li>
+                <li><a href="#">翻新和优惠</a></li>
+                <li><a href="#">分期付款</a></li>
+                <li><a href="#">重复使用和循环利用</a></li>
+                <li><a href="#">订单状态</a></li>
+                <li><a href="#">选购帮助</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <div class="footer-title">教育应用
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">Apple 与教育</a></li>
+                <li><a href="#">高校师生选购</a></li>
+            </ul>
+            <div class="footer-title">商务应用
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">Apple 与商务</a></li>
+                <li><a href="#">商务选购</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <div class="footer-title">帐户
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">管理你的 Apple ID</a></li>
+                <li><a href="#">Apple Store 帐户</a></li>
+                <li><a href="#">Cloud.com</a></li>
+            </ul>
+            <div class="footer-title">Apple 价值观
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">辅助功能</a></li>
+                <li><a href="#">环境责任</a></li>
+                <li><a href="#">隐私</a></li>
+                <li><a href="#">供应商责任</a></li>
+            </ul>
+        </div>
+        <div class="footer-box">
+            <div class="footer-title">关于 Apple
+                <span class="add">+</span>
+            </div>
+            <ul>
+                <li><a href="#">Apple 资讯</a></li>
+                <li><a href="#">工作机会</a></li>
+                <li><a href="#">媒体资讯</a></li>
+                <li><a href="#">活动</a></li>
+                <li><a href="#">联系 Apple</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<div class="footer-bottom">
+    <div class="footer-bottom1">
+        <div class="footer-bottom11">Copyright © 2017 Apple Inc. 保留所有权利</div>
+        <div class="footer-bottom12">
+            <ul>
+                <li><a href="">隐私政策</a></li>
+                <li><a href="">使用条款</a></li>
+                <li><a href="">销售政策</a></li>
+                <li><a href="">法律信息</a></li>
+                <li style="border-right: 0"><a href="">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom13"><a href=""><img src="images/6.png"></a></div>
+    </div>
+    <div class="footer-bottom22">京公安网安备 11010502008968 京ICP备10214630</div>
+</div>
+
+</body>
+</html>
