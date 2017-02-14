@@ -113,7 +113,7 @@ html{
     margin-top: -0.2rem;
 }
 .top-input-input{
-    width: 5.64rem;
+    width: 75%;
     height: 0.6rem;
     background:#FEF1CE;
     float: left;
@@ -133,7 +133,7 @@ html{
     line-height: 0.6rem;
     margin-left: 0.1rem;
     padding-top: 0.03rem;
-    float: left;
+    float:right;
 }
 @font-face {
     font-family: 'iconfont';  /* project id 222815 */
