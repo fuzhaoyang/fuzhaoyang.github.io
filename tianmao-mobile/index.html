@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>苏宁易购</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+
+    <link type="text/css" rel="Stylesheet" href="css/imageflow.css" />
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/imageflow.js"></script>
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <link rel="stylesheet" href="css/base.css">
+    <style>
+
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            /*text-align: center;*/
+            font-size: 0.18rem;
+            background: #fff;
+            height: 3rem;
+            width: 1rem;
+            position: relative;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            border: 1px solid #E9E9E9;
+            margin-top: -0.22rem;
+        }
+    </style>
+</head>
+<body>
+<div class="top-container">
+    <div id="top-img"><a href=""><img src="images/top.jpg"></a><div id="left-icon3" onclick="function swa() {
+
+    }">&#xe64a;</div></div>
+    <script>
+        var box=document.getElementById("left-icon3");
+        var box1=document.getElementById("top-img");
+        box.onclick=function swa(){
+            box1.style.display="none";
+        }
+    </script>
+    <div id="page-nav">
+        <div class="top-input-left">
+            <div class="left-icon">&#xe6dc;</div>
+            <p>分类</p>
+        </div>
+        <div class="top-input-input"><input id="top-input" type="text" placeholder="美食美酒" >
+            <div class="left-icon2">&#xe605;</div>
+        </div>
+        <div class="top-input-right">
+            <div class="left-icon1">&#xe643;</div>
+            <p>购物车</p>
+        </div>
+    </div>
+    </div>
+
+<!-- 广告轮播 -->
+<div id="ad-carousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators ol">
+        <li data-target="#ad-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#ad-carousel" data-slide-to="1"></li>
+        <li data-target="#ad-carousel" data-slide-to="2"></li>
+        <li data-target="#ad-carousel" data-slide-to="3"></li>
+        <li data-target="#ad-carousel" data-slide-to="4"></li>
+
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="images/banner1.jpg" alt="1 slide">
+        </div>
+        <div class="item">
+            <img src="images/banner2.jpg" alt="2 slide">
+        </div>
+        <div class="item">
+            <img src="images/banner3.jpg" alt="3 slide">
+        </div>
+        <div class="item">
+            <img src="images/banner4.jpg" alt="4 slide">
+        </div>
+        <div class="item">
+            <img src="images/banner2.jpg" alt="2 slide">
+        </div>
+
+    </div>
+</div>
+<div class="nav">
+    <ul>
+        <li><a href=""><img src="images/icon1.png"><p>分类</p></a></li>
+        <li><a href=""><img src="images/icon2.png"><p>大聚惠</p> </a></li>
+        <li><a href=""><img src="images/icon3.png"><p>苏宁超市</p> </a></li>
+        <li><a href=""><img src="images/icon4.webp"><p>红孩子母婴</p> </a></li>
+        <li><a href=""><img src="images/icon5.png"><p>特价手机</p> </a></li>
+        <li><a href=""><img src="images/icon6.png"><p>家电商城</p> </a></li>
+        <li><a href=""><img src="images/icon7.webp"><p>赚钱</p> </a></li>
+        <li><a href=""><img src="images/icon8.png"><p>领云钻</p> </a></li>
+        <li><a href=""><img src="images/icon9.png"><p>身边苏宁</p> </a></li>
+        <li><a href=""><img src="images/icon10.png"><p>优惠券</p> </a></li>
+    </ul>
+</div>
+<div class="news">
+    <div class="news-logo"><a href=""><img src="images/toutiao.png"> </a></div>
+    <div id="moocBox">
+        <ul>
+            <li><a href="#">苹果财报低于预期 三星创新高</a></li>
+            <li><a href="#">今年全球诞生了20件黑科技</a></li>
+            <li><a href="#">下海搞手机的电脑厂商现在咋样了？</a></li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    var area= document.getElementById('moocBox');
+    var iliHeight = 40;
+    var speed = 50;
+    var time;
+    var delay= 2000;
+    area.scrollTop=0;
+    area.innerHTML+=area.innerHTML;
+    function startScroll(){
+        time=setInterval("scrollUp()",speed);
+        area.scrollTop++;
+    }
+    function scrollUp(){
+        if(area.scrollTop % iliHeight==0){
+            clearInterval(time);
+            setTimeout(startScroll,delay);
+        }else{
+            area.scrollTop++;
+            if(area.scrollTop >= area.scrollHeight/2){
+                area.scrollTop =0;
+            }
+        }
+    }
+    setTimeout(startScroll,delay);
+    </script>
+      <div class="slide-container">
+          <div class="content-container">
+      <div class="swiper-container">
+          <div class="slide-top"><img src="images/slide-logo.png"><p>18点场</p><div class="more">抢好货</div><span>&gt;</span> </div>
+          <div class="swiper-wrapper">
+              <div class="swiper-slide" >
+                  <div class="swiper-img"><a href=""><img src="images/slide1.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide" >
+                  <div class="swiper-img"><a href=""><img src="images/slide2.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">2</i><i class="f2">.</i><i class="f3">8</i><i class="f4">折</i></span>
+                          <p class="p1">￥278.8</p>
+                          <p class="p2">￥999.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide3.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">2</i><i class="f2">.</i><i class="f3">1</i><i class="f4">折</i></span>
+                          <p class="p1">￥2399.00</p>
+                          <p class="p2">￥2699.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide4.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide4.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide5.jpg"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide6.jpg"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide1.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide1.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="swiper-slide">
+                  <div class="swiper-img"><a href=""><img src="images/slide1.webp"> </a>
+                      <div class="swiper-bottom">
+                          <img src="images/bottom-img.png">
+                          <span class="sale"><i class="f1">9</i><i class="f2">.</i><i class="f3">0</i><i class="f4">折</i></span>
+                          <p class="p1">￥9.90</p>
+                          <p class="p2">￥69.00</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+          </div>
+          <div class="content-container1">
+          <div class="content-top"><img src="images/content-top.png"> </div>
+              <div class="content1">
+               <div class="content-left"><a href=""><img src="images/item1.webp"> </a></div>
+                  <div class="content-right">
+                      <div class="content-right-top"><a href=""><img src="images/item2.webp"> </a></div>
+                      <div class="content-right-bottom"><a href=""><img src="images/item3.webp"> </a></div>
+                  </div>
+              </div>
+              <div class="content2">
+                  <div class="item1"><a href=""><img src="images/item4.png"> </a></div>
+                  <div class="item1"><a href=""><img src="images/item5.png"></a></div>
+                  <div class="item1"><a href=""><img src="images/item6.png"></a></div>
+                  <div class="item1"><a href=""><img src="images/item7.webp"></a></div>
+              </div>
+          </div>
+          <div class="content-container2">
+              <div class="content-top"><img src="images/content-top1.png"> </div>
+              <div class="content-container2-left">
+                  <div class="container2-left-top"><a href=""><img src="images/item8.png"> </a></div>
+                  <div class="container2-left-bottom"><a href=""><img src="images/item9.png"> </a></div>
+              </div>
+              <div class="content-container2-right">
+                  <div class="item2"><a href=""><img src="images/item10.webp"> </a></div>
+                  <div class="item2"><a href=""><img src="images/item11.webp"> </a></div>
+                  <div class="item2"><a href=""><img src="images/item12.webp"> </a></div>
+              </div>
+          </div>
+
+  </div>
+<footer>
+<ul  class="footer">
+    <li>登陆</li>
+    <li>注册</li>
+    <li>电脑版</li>
+    <li>普通版</li>
+    <li>客户端</li>
+</ul>
+    <p>2017 苏宁 suning.com 版权所有 </p>
+    <div class="bottom-fixed">
+        <ul>
+            <li><a href=""><img src="images/1.webp"> </a>
+                <p>首页</p>
+            </li>
+            <li><a href=""><img src="images/2.webp"></a>
+                <p>分类</p>
+            </li>
+            <li><a href=""><img src="images/3.png"></a>
+                <p>必抢清单</p>
+            </li>
+            <li><a href=""><img src="images/4.webp"></a>
+                <p>我的易购</p>
+            </li>
+            <li><a href=""><img src="images/5.webp"></a>
+                <p>新人礼包</p>
+            </li>
+        </ul>
+    </div>
+    <!--<div id="top" class="show"></div>-->
+
+</footer>
+<!--<script>-->
+    <!--var nav=document.getElementById("top");-->
+    <!--window.onscroll = function(){-->
+        <!--var scrollTop1 = document.body.scrollTop;-->
+        <!--if(scrollTop1 > 1000){-->
+            <!--nav.className = "show";-->
+        <!--}else{-->
+            <!--nav.className = "";-->
+        <!--}-->
+        <!--nav.onclick = function(){-->
+            <!--document.body.scrollTop = 0;-->
+        <!--}-->
+    <!--};-->
+
+<!--</script>-->
+<script src="js/jquery-1.11.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/swiper.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView:3,
+        paginationClickable: true,
+        spaceBetween: 3
+    });
+</script>
+<script>
+    var pagenav=document.getElementById("page-nav");
+    var pagenav_top = pagenav.offsetTop;
+    window.onscroll = function(){
+        var scrollTop = document.body.scrollTop;
+        if(scrollTop < pagenav_top){
+            pagenav.className = "";
+        }else{
+            pagenav.className = "fixed";
+        }
+    }
+</script>
+</body>
+</html>
