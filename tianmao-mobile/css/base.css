@@ -133,7 +133,7 @@ html{
     line-height: 0.6rem;
     margin-left: 0.1rem;
     padding-top: 0.03rem;
-    float:right;
+    float:left;
 }
 @font-face {
     font-family: 'iconfont';  /* project id 222815 */
