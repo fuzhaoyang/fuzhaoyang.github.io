@@ -32,6 +32,11 @@ $(function () {
               $('.zhuce-content').addClass('show1');
               $(".bg").addClass("show1");
           }
+        if(w<600){
+            $(".tool").css({
+                display:"none"
+            })
+        }
         })
 
     // toggle切换

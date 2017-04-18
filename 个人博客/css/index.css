@@ -187,7 +187,9 @@ html,body{
     padding-top: 20px;
     padding-bottom: 20px;/*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
 }
-
+#moocBox ul li{
+    margin-left: -40px;
+}
 #moocBox ul li a{
     color: #fff;
     text-decoration: none;
@@ -334,7 +336,7 @@ html,body{
     height: 50px;
     border-radius: 50%;
     float: left;
-    margin-top: 20px;
+    margin-top: -20px;
 }
 .pictureu{
     width: 100%;
@@ -345,7 +347,6 @@ html,body{
     width: 160px;
     height:150px;
     float: left;
-    padding-top: 20px;
 }
 .picture-right p{
     font-size: 14px;
@@ -384,16 +385,25 @@ html,body{
     display: block !important;
 }
 @media screen and (max-width: 1000px) {
+    body{
+        overflow-x: hidden;
+    }
     .togg{
         display: block ;
     }
 }
 @media screen and (min-width: 1000px) {
+    body{
+        overflow-x: hidden;
+    }
     .left-move{
         margin-left: 0;
     }
 }
 @media screen and (max-width: 500px) {
+    body{
+        overflow-x: hidden;
+    }
    .lesson-content img{
        width: 350px;
        height: 110px;
@@ -411,22 +421,53 @@ html,body{
         height: 70px !important;
     }
 }
-@media screen and (min-width: 320px) {
+@media screen and (max-width: 380px) {
+    body{
+        overflow-x: hidden;
+    }
+.picture-right{
+    font-size: 12px !important;
+    width: 140px;
+}
+    .picture img{
+        width: 30px;
+        height:30px;
+    }
+}
+@media screen and (max-width: 320px) {
+    body{
+        overflow-x: hidden;
+    }
     .lesson-content img{
         width: 280px;
         height: 80px;
     }
     .lesson-content{
-        height:80px !important;
+        height:80px ;
         padding-left: 25px;
     }
     .lesson{
         height: 50px;
-        margin-top: 0 !important;
+        margin-top: 0 ;
     }
     .img img{
         width: 50px !important;
         height: 50px !important;
+    }
+
+    .picture {
+      margin-top: -20px;
+    }
+    .picture-right{
+        width: 140px!important;
+        height: 100px;
+        float: left;
+        margin-top: -10px;
+        margin-left: 10px;
+
+    }
+    .you a{
+        font-size: 12px !important;
     }
 }
 
