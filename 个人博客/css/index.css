@@ -386,7 +386,7 @@ html,body{
 }
 @media screen and (max-width: 1000px) {
     body{
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
     .togg{
         display: block ;
@@ -394,7 +394,7 @@ html,body{
 }
 @media screen and (min-width: 1000px) {
     body{
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
     .left-move{
         margin-left: 0;
@@ -402,7 +402,7 @@ html,body{
 }
 @media screen and (max-width: 500px) {
     body{
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
    .lesson-content img{
        width: 350px;
@@ -423,7 +423,7 @@ html,body{
 }
 @media screen and (max-width: 380px) {
     body{
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
 .picture-right{
     font-size: 12px !important;
@@ -436,7 +436,7 @@ html,body{
 }
 @media screen and (max-width: 320px) {
     body{
-        overflow-x: hidden;
+        overflow-x: hidden !important;
     }
     .lesson-content img{
         width: 280px;
