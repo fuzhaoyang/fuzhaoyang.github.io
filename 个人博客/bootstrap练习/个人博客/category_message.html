@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/snow.js"></script>
+    <script src="js/jquery.js"></script>
+
+</head>
+<style>
+   body{
+       background: #f5e5c1 url(http://cs.itbyc.com/bgimg_top%5B1%5D.jpg) 50% top scroll no-repeat;
+
+   }
+
+   .snow-container { position: fixed; top: -750px; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100001;
+       background: red;
+   }
+
+   .navbar:hover{
+       opacity: 1 !important;
+   }
+    .right-top{
+        width: 100%;
+        height: 50px;
+        border-bottom: 2px dashed  #F0AD4E;
+        line-height: 50px;
+        font-size: 20px;
+        color: #666;
+        font-weight: 700px;
+    }
+    .right-content{
+        width: 100%;
+        height: 300px;
+    }
+
+   #moocBox {
+       height: 290px;
+       width: 100%;
+       overflow: hidden;
+       padding-top: 20px;
+       padding-bottom: 20px;/*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+   }
+   #moocBox ul{
+       margin: 0;
+       list-style: none;
+   }
+   #moocBox ul li {
+       height: 40px;
+       line-height: 40px;
+       overflow: hidden;
+   }
+   #moocBox ul li a {
+       width: 100%;
+       float: left;
+       display: block;
+       overflow: hidden;
+       height: 40px;
+       color: #666 !important;
+   }
+   #moocBox1 {
+       height: 490px;
+       width: 100%;
+       overflow: hidden;
+       padding-top: 20px;
+       padding-bottom: 20px;/*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+   }
+   #moocBox1 ul{
+       margin: 0;
+       list-style: none;
+   }
+   #moocBox1 ul li {
+       height: 40px;
+       line-height: 40px;
+       overflow: hidden;
+   }
+   #moocBox1 ul li a {
+       width: 100%;
+       float: left;
+       display: block;
+       overflow: hidden;
+       height: 40px;
+       color: #666 !important;
+       text-decoration: none;
+   }
+    .lanmu{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+        font-size:20px;
+        color: #fff;
+        border-radius: 5px;
+    }
+    .lan-content{
+        width: 100%;
+        height: 240px;
+    }
+    .content{
+       width: 100%;
+        background:rgba(255,255,255,0.4);
+        margin-top: 20px;
+     }
+    .content-top{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        overflow: hidden;
+        color: #666;
+        border-bottom: 20px;
+
+    }
+    .content-top p{
+        display: block;
+        width: 300px;
+        font-size: 12px;
+    }
+    .img-response{
+        display: block;
+        width: 100% !important;
+        height: auto;
+        opacity: 0.5 !important;
+    }
+    .content-button{
+        width: 100%;
+        height: 30px;
+    }
+    .c-button{
+        width: 80px;
+        height: 20px;
+        background: #FD8A61;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        float: right;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .c-button:hover{
+        background: red;
+    }
+    .footer{
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+    .content-c{
+        width: 100%;
+    }
+   #moocBox {
+       height: 290px;
+       width: 100%;
+       overflow: hidden;
+       padding-top: 20px;
+       padding-bottom: 20px;/*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+   }
+  
+   #moocBox ul li a{
+       color: #fff;
+       text-decoration: none;
+   }
+   #moocBox ul li a:hover{
+       color:#F0AD4E ;
+   }
+   #mooc ul{
+       margin: 0;
+       list-style: none;
+   }
+   #mooc ul li {
+       height:40px;
+       line-height: 40px;
+       overflow: hidden;
+       padding-left: 15px;
+       background:rgba(255,255,255,0.4);
+   }
+
+   #mooc ul li a {
+       width: 100%;
+       float: left;
+       display: block;
+       overflow: hidden;
+       height: 40px;
+       color: #6A5F50;
+       text-decoration: none;
+
+   }
+   #mooc ul li a:hover{
+       color: red;
+   }
+
+   .nav-lu{
+        width: 240px;
+        height: 50px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+   /*回顶样式*/
+    #toor-bar{
+        width: 40px;
+        height: 40px;
+        background: red;
+        position: fixed;
+        right: 10px;
+        bottom: 30px;
+        font-family: "iconfont";
+        font-size: 42px !important;
+        line-height: 40px;
+        cursor: pointer;
+        color: #fff;
+    }
+   @font-face {
+       font-family: 'iconfont';  /* project id 272883 */
+       src: url('http://at.alicdn.com/t/font_c7trr1pjaqyqfr.eot');
+       src: url('http://at.alicdn.com/t/font_c7trr1pjaqyqfr.eot?#iefix') format('embedded-opentype'),
+       url('http://at.alicdn.com/t/font_c7trr1pjaqyqfr.woff') format('woff'),
+       url('http://at.alicdn.com/t/font_c7trr1pjaqyqfr.ttf') format('truetype'),
+       url('http://at.alicdn.com/t/font_c7trr1pjaqyqfr.svg#iconfont') format('svg');
+   }
+</style>
+<body>
+<div class="snow-container"><canvas width="1318" height="599"></canvas></div>
+<nav class="navbar navbar-inverse navbar-fixed-top" style="opacity: 0.6">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png" alt="" style="width: 50px;height: 50px;display: inline-block">技术博客</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <!--<form class="navbar-form navbar-right">-->
+                <!--<div class="form-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                <!--</div>-->
+                <!--<button type="submit" class="btn btn-default">Submit</button>-->
+            <!--</form>-->
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="#">首页<span class="sr-only">(current)</span></a></li>
+                <li><a href="#">视屏教程</a></li>
+                <li><a href="#">关于朝阳</a></li>
+                <li><a href="#">留言</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid" style="margin-top: 250px">
+    <div class="container">
+    <div class="row"style=" background: #F5E5C1;">
+        <div class="col-xs-12 col-md-9" >
+            <div class="content-top" style="margin-bottom: 10px">您当前的位置：首页 > 留言 >
+            </div>
+             <div class="content">
+            <div class="content-top" style="margin-bottom: 10px">
+                设计者
+               <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-3"><img src="images/cont4.png" alt="" class="img-response" style="margin-top: 10px"></div>
+                <div class="col-xs-12 col-md-9" style="margin-top: 10px">三十岁时才知道，曾经躲过去的今天都要你加倍还</div>
+            </div>
+            <div class="content-button">
+                <div class="c-button">详细信息>></div>
+            </div>
+
+        </div>
+            <div class="content">
+                <div class="content-top" >
+                   牛XX
+                    <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="images/cont1.jpg" alt="" class="img-response" style="margin-top: 10px"></div>
+                    <div class="col-xs-12 col-md-9" style="margin-top: 10px">当你处在负面情绪，和伴侣发生情绪错位时，要学会及时沟通，懂得更智慧地表达自己的情绪和想法</div>
+                </div>
+                <div class="content-button">
+                    <div class="c-button">详细信息>></div>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="content-top" >
+                    牛XX
+                    <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="images/cont1.jpg" alt="" class="img-response" style="margin-top: 10px"></div>
+                    <div class="col-xs-12 col-md-9" style="margin-top: 10px">当你处在负面情绪，和伴侣发生情绪错位时，要学会及时沟通，懂得更智慧地表达自己的情绪和想法</div>
+                </div>
+                <div class="content-button">
+                    <div class="c-button">详细信息>></div>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="content-top" >
+                    牛XX
+                    <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="images/cont1.jpg" alt="" class="img-response" style="margin-top: 10px"></div>
+                    <div class="col-xs-12 col-md-9" style="margin-top: 10px">当你处在负面情绪，和伴侣发生情绪错位时，要学会及时沟通，懂得更智慧地表达自己的情绪和想法</div>
+                </div>
+                <div class="content-button">
+                    <div class="c-button">详细信息>></div>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="content-top" style="margin-bottom: 10px">
+                    红苹果
+                    <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="images/cont2.png" alt="" class="img-response" style="margin-top: 10px"></div>
+                    <div class="col-xs-12 col-md-9" style="margin-top: 10px">人博客网站是一个关注互联网和搜索引擎的个人博客网站,自网站模板属于小清新类型的，一直以来很多人找我要我博客的模板，今天干脆把他共享到站长网，后续也会持续更新！</div>
+                </div>
+                <div class="content-button">
+                    <div class="c-button">详细信息>></div>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="content-top" style="margin-bottom: 10px">
+                    前端开发
+                    <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="images/cont3.png" alt="" class="img-response" style="margin-top: 10px"></div>
+                    <div class="col-xs-12 col-md-9" style="margin-top: 10px">本文为缓缓君原创，由公众号“缓缓说”首发在微博热搜上看到了一个话题：我来月经要写脸上吗？公交车上，老大爷因为姑娘没让座而骂个不停，畜生、缺德……要多难
+                    </div>
+                </div>
+                <div class="content-button">
+                    <div class="c-button">详细信息>></div>
+                </div>
+
+            </div>
+            <div class="content">
+                <div class="content-top" style="margin-bottom: 10px">
+                    花下你我
+                    <span> 发布时间：17-02-22 作者：杨雨 分类：在路上</span>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3"><img src="images/cont5.png" alt="" class="img-response" style="margin-top: 10px"></div>
+                    <div class="col-xs-12 col-md-9" style="margin-top: 10px">本文为缓缓君原创，由微信公众号“缓缓说”首发恋爱后，树小姐总是睡不安稳。树小姐一直不相信姐弟恋，她觉得姐弟恋不靠谱。穆先生小她两岁，当他向她表白时，理
+                    </div>
+                </div>
+                <div class="content-button">
+                    <div class="c-button">阅读全文>></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="  col-md-3 hidden-xs  hidden-sm n1">
+            <div class="right-top text-center">热门文章</div>
+            <div class="right-content">
+                <div  id="moocBox">
+                    <ul>
+                        <li><a href="#">1.学会html5 </a></li>
+                        <li><a href="#">2.tab页面切换效果</a></li>
+                        <li><a href="#">3.圆角水晶按钮制作</a></li>
+                        <li><a href="#">4.HTML+CSS基础课程</a></li>
+                        <li><a href="#">5.分页页码制作</a></li>
+                        <li><a href="#">6.导航条菜单的制作</a></li>
+                        <li><a href="#">7.信息列表制作</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-top text-center">点击排行</div>
+            <div class="right-content">
+                <div  id="moocBox1">
+                    <ul>
+                        <li><a href="#">1.DedeCMS高级技巧:幻灯片arclist</a></li>
+                        <li><a href="#">2.织梦吧:DEDECMS站内新闻的使用图</a></li>
+                        <li><a href="#">3.新手教程:Dedecms栏目自定义字段</a></li>
+                        <li><a href="#">4.linux命令eval的用法讲解</a></li>
+                        <li><a href="#">5.linux管道及重定向详解</a></li>
+                        <li><a href="#">6.linux下普通文件和目录文件区别</a></li>
+                        <li><a href="#">7.Linux用户alias文件配置方法</a></li>
+                        <li><a href="#">8.Linux用户alias文件配置方法</a></li>
+                        <li><a href="#">9.Linux禁用root账户的方法</a></li>
+                        <li><a href="#">10.linux系统中如何安装程序、软件</a></li>
+                        <li><a href="#">11.进程的内核栈是什么?浅谈Linux的</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+        </div>
+</div>
+<div class="nav-lu">
+    <nav aria-label="Page navigation navbar-center" >
+        <ul class="pagination" style="margin: 0 auto;">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active"><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="footer">
+    Design by：朝阳 备案号：湘ICP备14011335号-2
+</div>
+<div id="toor-bar">&#xe66d;</div>
+<script>
+    var area = document.getElementById('moocBox');
+    var iliHeight = 46;//单行滚动的高度
+    var speed = 50;//滚动的速度
+    var time;
+    var delay= 2000;
+    area.scrollTop=0;
+    area.innerHTML+=area.innerHTML;//克隆一份一样的内容
+    function startScroll(){
+        time=setInterval("scrollUp()",speed);
+        area.scrollTop++;
+    }
+    function scrollUp(){
+        if(area.scrollTop % iliHeight==0){
+            clearInterval(time);
+            setTimeout(startScroll,delay);
+        }else{
+            area.scrollTop++;
+            if(area.scrollTop >= area.scrollHeight/2){
+                area.scrollTop =0;
+            }
+        }
+    }
+    setTimeout(startScroll,delay)
+</script>
+</body>
+</html>

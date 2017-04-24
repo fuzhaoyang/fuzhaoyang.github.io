@@ -477,7 +477,7 @@ html,body{
 
 
 .top-content{
-    width: 1300px;
+    width: 100%;
     height: 126px;
     margin: 10px auto;
     position: relative;
@@ -675,41 +675,69 @@ html,body{
     justify-content: space-around;
     flex-wrap: wrap;
     margin-left: 2px;
+    height: 240px;
+
 }
-.lan{
+.box{
     width: 50%;
+    height: 120px;
+    transform-style:preserve-3d;
+    perspective:1000px;
+}
+.box a{
+    color: #fff;
+    text-decoration: none;
+}
+.box1{
+    width: 100%;
+    height: 120px;
+    position: relative;
+    transform-style:preserve-3d;
+    transition: all 1s;
+    transform-origin: center center ;
+}
+.box2{
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    line-height: 120px;
+    transform-origin: center center;
+    transform: rotateY(180deg);
+
+}
+.box3{
+    width: 100%;
     height: 120px;
     text-align: center;
     line-height: 120px;
-    cursor: pointer;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-.lan a{
-    color:#fff;
-    text-decoration: none;
+.box:hover .box1{
+    transform: rotateY(180deg);
 }
-.lan:nth-child(1){
-    background:#FF9900 ;
+.l1{
+  background: #C61A14;
 }
-.lan:nth-child(2){
-    background:#8C49AD ;
+
+.l2{
+    background: #63A8E8;
 }
-.lan:nth-child(3){
-    background:#E7769E ;
+
+.l3{
+    background: #F16E50;
 }
-.lan:nth-child(4){
-    background:#A98659 ;
+.l4{
+    background: #74A736;
 }
 
 
 
-.lan:hover {
-    transition:all 1s;
-    -webkit-transform:rotate(360deg);
-}
-.lan:hover .a{
-    color: red;
-    transform: scale(1.5);
-}
+
 
 
 /*lesson样式*/

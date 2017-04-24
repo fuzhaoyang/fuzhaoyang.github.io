@@ -40,13 +40,25 @@ $(function () {
         })
 
     // toggle切换
+    //
+    // $(".togg").click(function (e) {
+    //     $(".left").toggleClass("left-move");
+    //     $(".right").toggleClass("right-show");
+    //
+    // })
 
-    $(".togg").click(function () {
+    $(".left").delegate(".togg","click",function(){
+        if($(".left").hasClass("left-move")) {
+            $(".left").removeClass("left-move");
+            $(".right").removeClass("right-show");
+        }else {
+            $(".left").addClass("left-move");
+            $(".right").addClass("right-show");
 
-        $(".left").toggleClass("left-move");
-        $(".right").toggleClass("right-show");
+        }
 
-    })
+
+    });
 
 
 

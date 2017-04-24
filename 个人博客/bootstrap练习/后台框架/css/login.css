@@ -1,0 +1,153 @@
+/*顶部*/
+*{
+    box-sizing: border-box;
+}
+.abody{
+    font-size:14px;
+    color:#333;
+}
+.header{
+    width:100%;
+    height:70px;
+    /*line-height: 70px;*/
+    background:#0B85C6;
+    padding-left:20px;
+}
+.header h2{
+    color:#fff;
+    font-size:24px;
+    line-height: 70px;
+    margin-left:15px;
+    font-weight:400;
+}
+.header a {
+    float: left;
+    color: #fff;
+    padding:8px 5px;
+    border-radius:5px;
+    margin-left:15px;
+    margin-top:17px;
+}
+.header a span{
+    margin-right:5px;
+}
+.bg_green{
+    background: #45D883;
+}
+.bg_blue{
+    background:#00AAEE;
+}
+.bg_red{
+    background:#EE3333;
+}
+@font-face {
+    font-family: 'iconfont';  /* project id 279261 */
+    src: url('//at.alicdn.com/t/font_iwlyaihy5u434n29.eot');
+    src: url('//at.alicdn.com/t/font_iwlyaihy5u434n29.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_iwlyaihy5u434n29.woff') format('woff'),
+    url('//at.alicdn.com/t/font_iwlyaihy5u434n29.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_iwlyaihy5u434n29.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family: 'iconfont' !important;
+    font-size:12px;
+    /*color:#fff;*/
+}
+.admin_avatar{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    overflow:hidden;
+    margin-top:10px;
+}
+.admin_avatar img{
+    width:100%;
+    height:100%;
+}
+
+.content{
+    height:568px;
+}
+
+/*侧边栏*/
+
+.left_nav{
+    width:15%;
+    border-right:1px solid #B5CFD9;
+    background:#F2F9FD;
+    height:100%;
+}
+.left_nav h4{
+    padding:15px 0 15px 20px;
+    background:#107FB7;
+    color:#fff;
+    font-size:18px;
+    font-weight:400;
+}
+.left_nav h4 span{
+    font-size:18px;
+    margin-right:15px;
+}
+.left_nav dl{
+    line-height: 35px;
+}
+.left_nav dl span{
+    margin-right:10px;
+}
+.left_nav dt{
+    font-weight:bold;
+    border-bottom:1px solid #B5CFD9;
+    border-top:1px solid #B5CFD9;
+    padding-left:20px;
+}
+.left_nav dd{
+    padding-left:20px;
+}
+.left_nav dl a span{
+    color:#333;
+}
+.left_nav dl a{
+    color:#333;
+}
+.left_nav dl a:hover,.left_nav dl a:hover span.iconfont{
+    color:#0099CF;
+}
+
+
+/*admin 部分*/
+.admin{
+    width:85%;
+    height:568px;
+}
+.top{
+    padding:10px 0 10px 20px;
+    font-size:12px;
+    background: #F2F9FD;
+    border-bottom:1px solid #B5CFD9;
+}
+.top ul li{
+    float:left
+}
+.top ul i{
+    float:left;
+    margin:0 15px;
+}
+.top a{
+    color:#333;
+}
+.top a span{
+    color:#333;
+    font-size:16px;
+    margin-right:5px;
+}
+.top a:hover{
+    color:#0099CF;
+}
+
+.iframe_box {
+    padding:15px 15px 0 15px;
+    height:100%;
+    /*border:1px solid #ccc;*/
+}
+
+
