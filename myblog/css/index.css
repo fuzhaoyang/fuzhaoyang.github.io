@@ -404,6 +404,11 @@ html,body{
     body{
         overflow-x: hidden !important;
     }
+    .lesson-content{
+        width: 350px !important;
+        height: 110px;
+        margin-left: -20px !important;
+    }
    .lesson-content img{
        width: 350px;
        height: 110px;
