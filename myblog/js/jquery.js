@@ -41,7 +41,7 @@ $(function () {
         if(w<500){
          $(".snow-container").empty();
         }
-    
+    console.log($("#snow"))
 
 
 
