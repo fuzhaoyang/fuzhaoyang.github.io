@@ -302,6 +302,39 @@ html,body{
     color:#F16E50;
 
 }
+.toor-bar{
+    width: 40px;
+    height: 40px;
+
+    font-family: "iconfont";
+    font-size: 24px !important;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    color:#F16E50;
+    position: relative;
+
+}
+.erweima{
+    width: 83px;
+    height:83px;
+    position: absolute;
+    right: 45px;
+    bottom: 0;
+    opacity: 0;
+    transition: all 1s;
+
+}
+.erweima img{
+    width: 83px;
+    height: 83px;
+}
+.bar1:hover .erweima{
+    width: 83px;
+    height: 83px;
+    opacity: 1;
+
+}
 /*二维码*/
 @font-face {
     font-family: 'iconfont';  /* project id 272883 */

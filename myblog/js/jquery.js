@@ -12,6 +12,7 @@ $(function () {
        }
 
     });
+    console.log($("#toor-bar"))
     $('#toor-bar').click(function(event){
         $('html,body').animate({scrollTop:0}, 800);
     });
@@ -24,19 +25,10 @@ $(function () {
         $('.bg').toggleClass('show');
     });
 
-    var w=$(window).width();
-    if(w<500){
-        $("canvas").css({
-            display:"none"
 
-        })
-    }else{
-        $("canvas").css({
-            display:"block"
-        })
-    }
-    $(window).resize(function () {
 
+   
+        var w=$(window).width();
         if(w<768){
             $('.zhuce-content').addClass('show1');
             $(".bg").addClass("show1");
@@ -46,8 +38,10 @@ $(function () {
                 display:"none"
             })
         }
-
-    })
+        if(w<500){
+         $(".snow-container").empty();
+        }
+    
 
 
 
