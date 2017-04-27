@@ -37,6 +37,16 @@ $(function () {
                 display:"none"
             })
         }
+        if(w<500){
+            $("canvas").css({
+                display:"none"
+            })
+            
+        }else{
+            $("canvas").css({
+                display:"block"
+            })
+        }
         })
 
     // toggle切换
