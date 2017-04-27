@@ -24,30 +24,32 @@ $(function () {
         $('.bg').toggleClass('show');
     });
 
+    var w=$(window).width();
+    if(w<500){
+        $("canvas").css({
+            display:"none"
 
-
+        })
+    }else{
+        $("canvas").css({
+            display:"block"
+        })
+    }
     $(window).resize(function () {
-        var w=$(window).width();
-          if(w<768){
-              $('.zhuce-content').addClass('show1');
-              $(".bg").addClass("show1");
-          }
+
+        if(w<768){
+            $('.zhuce-content').addClass('show1');
+            $(".bg").addClass("show1");
+        }
         if(w<600){
             $(".tool").css({
                 display:"none"
             })
         }
-        if(w<500){
-            $("canvas").css({
-                display:"none"
-            })
-            
-        }else{
-            $("canvas").css({
-                display:"block"
-            })
-        }
-        })
+
+    })
+
+
 
     // toggle切换
     //
